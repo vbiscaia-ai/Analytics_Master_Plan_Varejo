@@ -1,301 +1,70 @@
-📊 Master Plan — Performance de Varejo & Comunicação
-Diagnóstico de Campanhas, KPIs e Portfólio | SQL • Python • Tableau
+# 📊 Master Plan — Performance de Varejo & Comunicação
+> **Diagnóstico de Campanhas, KPIs e Portfólio | SQL • Python • Tableau**
 
-Este projeto simula um ecossistema real de dados do setor de beleza e venda direta, com foco em performance comercial, CRM e impacto de comunicações sazonais.
+Este projeto simula um ecossistema analítico completo do setor de varejo de beleza e venda direta, com foco em performance comercial, CRM e impacto de comunicações sazonais. O objetivo é demonstrar maturidade técnica em **Engenharia de Dados** e **Business Intelligence**.
 
-O objetivo é demonstrar domínio técnico e visão de negócio nas frentes de:
+---
 
-Estruturação e modelagem de dados (SQL)
+## 🚀 Visualização do Dashboard
+Explore os principais KPIs de Performance, CRM e Portfólio no dashboard interativo.
 
-Automação e tratamento de dados (Python)
+![Dashboard Preview](./assets/01_print_dashboard.png)
 
-Análise de KPIs e experimentação (A/B Testing)
+🔗 **[Acesse o Dashboard Interativo no Tableau Public](https://public.tableau.com/views/VisoGeraldePerformance/Capa?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
-Construção de dashboards executivos (Tableau)
+---
 
-Storytelling orientado à decisão
+## 🏗️ Arquitetura de Dados
+O pipeline foi estruturado seguindo o conceito de **Multi-hop Architecture** (RAW → TRUSTED → GOLD), garantindo governança e confiabilidade analítica.
 
-🚀 Objetivo do Projeto
+### 🔄 Fluxo de Processamento (ETL)
 
-Construir um pipeline analítico completo para:
+* **1️⃣ Camada RAW (Bronze):** Armazena dados brutos sintéticos simulando sistemas transacionais (PDV e e-commerce).
+* **2️⃣ Camada TRUSTED (Silver):** Transformações via **Python (Pandas)** para padronização de textos, tratamento de nulos e validação de métricas financeiras.
+* **3️⃣ Camada CLEAN (Analytics):** Consolidação em uma **tabela denormalizada (`sales_complete_clean`)** para alta performance no Tableau.
 
-Diagnosticar a performance comercial
+---
 
-Avaliar impacto de campanhas sazonais
+## 💾 Engenharia de Dados com SQL
+A camada analítica foi construída com foco em integridade referencial e reprodutibilidade.
 
-Identificar oportunidades de CRM e fidelização
+### 📁 Organização dos Scripts SQL
+1.  **`01_setup_stg.sql`**: DDL, Primary/Foreign Keys e precisão decimal para finanças.
+2.  **`02_data_cleaning_analytics.sql`**: Limpeza via **Regex** e criação da tabela Gold consolidada.
+3.  **`03_business_hypotheses.sql`**: Validação de 10+ hipóteses usando **CTEs**, **Window Functions** e Curva ABC.
 
-Apoiar decisões estratégicas com base em dados
+---
 
-Este projeto foi estruturado simulando o contexto de uma grande empresa de varejo com múltiplos canais (lojas físicas, e-commerce e venda direta).
+## 📊 Insights Estratégicos (Diagnóstico)
 
-🏗️ Arquitetura de Dados
+### 💎 1. Gestão de CRM
+* **Insight**: Clientes "Não Identificados" representam **32,3% da receita total**.
+* **Estratégia**: Oportunidade crítica de expansão de **LTV** através de programas de fidelização.
 
-O pipeline foi estruturado em camadas, seguindo boas práticas de governança e rastreabilidade.
+### 🌸 2. Sazonalidade
+* **Insight**: O **Dia das Mães** lidera em volume, mas o **Dia dos Namorados** entrega o maior ticket médio (**R$ 608,36**).
+* **Estratégia**: Segmentação para campanhas de "Gift-Giving" e reativação de clientes sazonais.
 
-🔄 Camadas do Processo ETL
-🟤 RAW (Dados Brutos)
+### 🧴 3. Portfólio & Margem
+* **Insight**: **Skincare** domina com **36,8% da receita**, apresentando a melhor margem média.
+* **Estratégia**: Categoria prioritária para modelos de recorrência e reposição automática.
 
-Armazenamento de arquivos CSV extraídos de sistemas transacionais
+---
 
-Preservação do dado original para auditoria
+## 🛠️ Tecnologias & Ferramentas
+| Tecnologia | Aplicação Principal |
+| :--- | :--- |
+| **SQL Avançado** | Modelagem, Window Functions, Denormalização |
+| **Python (Pandas)** | ETL, limpeza de dados e automações |
+| **Tableau** | Dashboards executivos e Data Storytelling |
+| **Markdown** | Documentação técnica e governança |
 
-🟡 STAGING / TRUSTED
+---
 
-Tratamento via Python (Pandas):
+## 👨‍💻 Autor
+**Victor Biscaia**
+* [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victor-biscaia/)
+* [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/vbiscaia-ai)
 
-Padronização de textos
-
-Tratamento de nulos
-
-Conversão de tipos
-
-Validação de métricas financeiras
-
-Exclusão de registros inconsistentes
-
-🔵 BI (Camada Analítica)
-
-Modelagem dimensional (Star Schema)
-
-Criação de chaves substitutas
-
-Normalização adicional via campos calculados no Tableau
-
-Base final otimizada para consumo executivo
-
-🗄️ Modelagem Dimensional
-
-Foi adotado o padrão Star Schema para garantir:
-
-Performance nas consultas
-
-Clareza analítica
-
-Escalabilidade do modelo
-
-📌 Tabelas Fato
-
-fact_sales
-
-📌 Dimensões
-
-dim_product
-
-dim_customer
-
-dim_date
-
-dim_channel
-
-dim_region
-
-🔧 Transformações por Dimensão
-🧴 Dimensão Produto
-
-Padronização de nomes
-
-Conversão de preços
-
-Hierarquia Categoria → Subcategoria
-
-Aplicação de Curva ABC (Window Functions)
-
-👤 Dimensão Cliente
-
-Deduplicação
-
-Tratamento de clientes "Não Identificados"
-
-Criação de flag de fidelização (Loyalty)
-
-📅 Dimensão Data
-
-Criação de chave substituta
-
-Atributos temporais (mês, trimestre, dia da semana)
-
-Identificação de sazonalidade
-
-💰 Fato Vendas
-
-Validação de integridade referencial
-
-Monitoramento de descartes
-
-Garantia de métricas financeiras invioláveis (Receita, Custo, Margem)
-
-📊 Principais KPIs Analisados
-
-Receita
-
-Margem
-
-Ticket Médio
-
-Receita por Canal
-
-Receita por Categoria
-
-Receita por Perfil de Cliente
-
-Retenção e Fidelização
-
-Curva ABC de Produtos
-
-Performance por Região
-
-Impacto de Datas Sazonais
-
-📈 Principais Insights Estratégicos
-💎 1. Gestão de CRM
-
-Clientes "Não Identificados" representam 32,3% da receita, indicando:
-
-Oportunidade de melhoria na captura de dados
-
-Potencial de aumento de LTV
-
-Prioridade para testes de fidelização
-
-💰 2. Crescimento Sustentado
-
-A performance geral indica:
-
-Crescimento sustentado impulsionado pelo aumento do ticket médio, mantendo margem saudável mesmo com variação no volume de vendas.
-
-🎯 3. Oportunidade de Fidelização
-
-Clientes não fidelizados representam a maior parte da receita
-
-Não identificados têm percentual próximo aos fidelizados
-
-Recomendação estratégica:
-Ações de fidelização + melhoria no registro de clientes para aumento de recorrência.
-
-🌸 4. Sazonalidade
-
-Dia das Mães é a principal alavanca de vendas
-
-Ticket elevado no Dia dos Namorados (R$ 608,36 para não identificados)
-
-Indicação clara de oportunidade para:
-
-Campanhas personalizadas
-
-Fluxos de boas-vindas segmentados
-
-🧴 5. Mix de Portfólio
-
-Skincare representa 36,8% da receita
-
-Categoria ideal para estratégias de recorrência e reposição automática
-
-🌎 6. Regionalidade
-
-Sudeste concentra maior maturidade
-
-Potencial de expansão regional via estratégia de canais
-
-🧪 Aplicação de Conceitos Estatísticos
-📌 LTV & Retenção
-
-Fidelizados apresentam maior recorrência
-
-LTV utilizado como base para priorização de investimento
-
-⚖️ Teste A/B (Hipótese Simulada)
-
-Hipótese:
-Fluxos de boas-vindas personalizados aumentam conversão de clientes não identificados.
-
-Grupo Prioritário:
-Clientes com alto ticket sazonal.
-
-Objetivo:
-Validar aumento de conversão e retenção via CRM estruturado.
-
-📊 Dashboard Executivo
-
-Construído com foco em:
-
-Poder de síntese
-
-Storytelling orientado à decisão
-
-Material executivo para liderança
-
-Visão consolidada de performance e oportunidades
-
-Estrutura do dashboard:
-
-Visão Geral (KPIs & Receita)
-
-CRM & Fidelização
-
-Sazonalidade & Campanhas
-
-Performance por Categoria
-
-Regionalidade & Canais
-
-🛠️ Tecnologias Utilizadas
-Tecnologia	Aplicação
-SQL	Modelagem dimensional, Window Functions, Curva ABC, métricas CRM
-Python (Pandas)	ETL, limpeza, automações
-Tableau	Visualização e Storytelling
-Markdown	Documentação e governança
-🎯 Competências Demonstradas
-
-✔ Estruturação e cruzamento de dados via SQL
-✔ Criação de novas tabelas e modelagem dimensional
-✔ Automação de ETL com Python
-✔ Aplicação de testes A/B
-✔ Construção de dashboards executivos
-✔ Storytelling orientado a negócio
-✔ Diagnóstico de KPIs e metas
-✔ Interface entre áreas (CRM, Marketing, Produto, Comercial)
-✔ Abstração de regras de negócio em métricas
-
-🧠 Perfil Profissional Evidenciado
-
-Este projeto demonstra alinhamento com posições de:
-
-Analista de Performance
-
-Business Intelligence
-
-Product Analytics
-
-Data Product Specialist
-
-Brandformance / Marketing Analytics
-
-Com forte foco em:
-
-Autonomia técnica
-
-Capacidade analítica
-
-Comunicação executiva
-
-Influência estratégica
-
-Mentalidade data-driven
-
-📎 Próximos Passos (Evoluções Possíveis)
-
-Implementação de modelo preditivo de churn
-
-Clusterização de clientes (RFM ou K-Means)
-
-Automação de pipeline via Airflow
-
-Integração com BigQuery
-
-Deploy de dashboard em ambiente cloud
-
-👨‍💻 Autor: Victor Biscaia
-Linkedin: https://www.linkedin.com/in/victor-biscaia/
-
-Projeto desenvolvido com foco em simulação real de ambiente corporativo de varejo e beleza, demonstrando maturidade técnica e visão estratégica orientada a performance.
+---
+*Projeto desenvolvido com visão estratégica voltada para desafios reais de performance no varejo de beleza.*
