@@ -1,0 +1,51 @@
+product_id,product_name,brand,category,subcategory,unit_price
+1,Produto 1,Eudora,Skincare,Subcat 5,93.91
+2,Produto 2,O Boticário,Skincare,Subcat 3,248.7
+3,Produto 3,Quem Disse Berenice,Skincare,Subcat 5,224.35
+4,Produto 4,Eudora,Perfume,Subcat 5,246.66
+5,Produto 5,Quem Disse Berenice,Perfume,Subcat 5,203.94
+6,Produto 6,Eudora,Perfume,Subcat 1,236.49
+7,Produto 7,Eudora,Skincare,,51.89
+8,Produto 8,Eudora,Perfume,Subcat 5,190.4
+9,Produto 9,O Boticário,Maquiagem,Subcat 5,46.4
+10,Produto 10,Eudora,Maquiagem,Subcat 2,209.06
+11,Produto 11,Eudora,Maquiagem,Subcat 3,171.49
+12,Produto 12,Eudora,Skincare,Subcat 4,134.93
+13,Produto 13,Quem Disse Berenice,Perfume,Subcat 5,95.93
+14,Produto 14,O Boticário,Maquiagem,,208.84
+15,Produto 15,Eudora,Perfume,Subcat 2,33.16
+16,Produto 16,O Boticário,Maquiagem,Subcat 2,120.38
+17,Produto 17,Quem Disse Berenice,Maquiagem,Subcat 5,122.8
+18,Produto 18,Eudora,Maquiagem,Subcat 5,101.08
+19,Produto 19,Eudora,Perfume,Subcat 1,38.7
+20,Produto 20,O Boticário,Skincare,Subcat 3,43.43
+21,Produto 21,Eudora,Maquiagem,,176.08
+22,Produto 22,Eudora,Perfume,Subcat 2,188.79
+23,Produto 23,Eudora,Maquiagem,Subcat 3,103.73
+24,Produto 24,Eudora,Skincare,Subcat 3,120.53
+25,Produto 25,Eudora,Maquiagem,Subcat 5,87.93
+26,Produto 26,Quem Disse Berenice,Skincare,Subcat 4,66.52
+27,Produto 27,O Boticário,Perfume,Subcat 3,239.22
+28,Produto 28,Eudora,Skincare,,211.44
+29,Produto 29,Quem Disse Berenice,Skincare,Subcat 5,139.08
+30,Produto 30,O Boticário,Maquiagem,Subcat 4,143.91
+31,Produto 31,Eudora,Maquiagem,Subcat 2,49.74
+32,Produto 32,Eudora,Maquiagem,Subcat 1,69.92
+33,Produto 33,Quem Disse Berenice,Maquiagem,Subcat 5,69.49
+34,Produto 34,O Boticário,Perfume,Subcat 3,226.32
+35,Produto 35,Eudora,Perfume,,208.07
+36,Produto 36,Quem Disse Berenice,Skincare,Subcat 2,115.24
+37,Produto 37,Eudora,Skincare,Subcat 4,104.86
+38,Produto 38,Quem Disse Berenice,Perfume,Subcat 2,205.0
+39,Produto 39,O Boticário,Skincare,Subcat 1,32.12
+40,Produto 40,O Boticário,Skincare,Subcat 3,148.27
+41,Produto 41,Quem Disse Berenice,Skincare,Subcat 1,237.59
+42,Produto 42,O Boticário,Perfume,,115.5
+43,Produto 43,O Boticário,Perfume,Subcat 5,123.5
+44,Produto 44,O Boticário,Maquiagem,Subcat 3,158.69
+45,Produto 45,O Boticário,Maquiagem,Subcat 1,188.0
+46,Produto 46,Quem Disse Berenice,Skincare,Subcat 3,59.17
+47,Produto 47,Quem Disse Berenice,Skincare,Subcat 2,149.36
+48,Produto 48,Quem Disse Berenice,Perfume,Subcat 1,42.61
+49,Produto 49,Eudora,Perfume,,179.87
+50,Produto 50,Quem Disse Berenice,Skincare,Subcat 2,215.53

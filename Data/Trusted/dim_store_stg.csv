@@ -1,0 +1,16 @@
+store_id,store_name,region,state,city
+1,Loja 1,Nordeste,PE,Recife
+2,Loja 2,Nordeste,SE,Aracaju
+3,Loja 3,Sul,MS,Campo Grande
+4,Loja 4,Sul,PR,Curitiba
+5,Loja 5,Sudeste,SP,São Paulo
+6,Loja 6,Sudeste,MG,Belo Horizonte
+7,Loja 7,Sul,RS,Porto Alegre
+8,Loja 8,Nordeste,BA,Salvador
+9,Loja 9,Sul,PR,Curitiba
+10,Loja 10,Nordeste,CE,Fortaleza
+11,Loja 11,Nordeste,CE,Fortaleza
+12,Loja 12,Nordeste,BA,Salvador
+13,Loja 13,Sudeste,SP,São Paulo
+14,Loja 14,Sul,RS,Porto Alegre
+15,Loja 15,Nordeste,PE,Recife

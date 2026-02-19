@@ -1,0 +1,501 @@
+customer_id,gender,age_group,loyalty_flag
+1,M,50+,False
+2,M,50+,True
+3,F,18-25,False
+4,F,50+,True
+5,M,18-25,False
+6,Indefinido,Não Informado,True
+7,M,26-35,False
+8,M,26-35,False
+9,Indefinido,26-35,False
+10,Indefinido,18-25,True
+11,M,18-25,True
+12,M,26-35,True
+13,M,26-35,False
+14,M,18-25,True
+15,F,Não Informado,True
+16,Indefinido,Não Informado,True
+17,Indefinido,26-35,False
+18,Indefinido,50+,True
+19,M,50+,True
+20,M,18-25,True
+21,F,50+,False
+22,F,26-35,False
+23,F,Não Informado,True
+24,Indefinido,18-25,False
+25,M,Não Informado,True
+26,Indefinido,50+,False
+27,Indefinido,18-25,True
+28,Indefinido,Não Informado,True
+29,F,26-35,True
+30,Indefinido,50+,True
+31,F,26-35,False
+32,Indefinido,50+,True
+33,Indefinido,Não Informado,True
+34,Indefinido,Não Informado,True
+35,M,50+,False
+36,M,Não Informado,True
+37,F,Não Informado,True
+38,M,50+,True
+39,F,Não Informado,False
+40,M,Não Informado,True
+41,M,18-25,True
+42,F,26-35,True
+43,Indefinido,50+,False
+44,Indefinido,18-25,False
+45,Indefinido,50+,False
+46,Indefinido,Não Informado,True
+47,M,Não Informado,False
+48,F,50+,True
+49,Indefinido,Não Informado,True
+50,Indefinido,26-35,True
+51,M,18-25,False
+52,F,50+,True
+53,F,18-25,False
+54,M,Não Informado,False
+55,Indefinido,50+,False
+56,M,18-25,False
+57,F,50+,True
+58,F,50+,False
+59,Indefinido,Não Informado,True
+60,F,Não Informado,True
+61,F,26-35,False
+62,M,18-25,False
+63,F,Não Informado,False
+64,M,50+,True
+65,F,50+,False
+66,F,50+,True
+67,F,18-25,False
+68,F,18-25,False
+69,F,Não Informado,False
+70,Indefinido,Não Informado,True
+71,M,Não Informado,False
+72,M,26-35,True
+73,Indefinido,26-35,False
+74,Indefinido,Não Informado,False
+75,M,26-35,False
+76,Indefinido,18-25,True
+77,Indefinido,Não Informado,False
+78,Indefinido,Não Informado,False
+79,Indefinido,26-35,True
+80,F,26-35,True
+81,Indefinido,Não Informado,False
+82,F,50+,True
+83,F,Não Informado,True
+84,F,26-35,False
+85,M,Não Informado,False
+86,F,Não Informado,False
+87,M,Não Informado,False
+88,Indefinido,18-25,True
+89,Indefinido,Não Informado,False
+90,M,18-25,True
+91,F,18-25,False
+92,Indefinido,50+,True
+93,M,50+,True
+94,F,26-35,True
+95,F,18-25,False
+96,Indefinido,50+,True
+97,F,Não Informado,False
+98,F,Não Informado,True
+99,Indefinido,26-35,False
+100,M,26-35,True
+101,M,26-35,True
+102,Indefinido,50+,True
+103,M,Não Informado,True
+104,Indefinido,50+,False
+105,M,26-35,False
+106,M,26-35,False
+107,Indefinido,Não Informado,True
+108,Indefinido,26-35,False
+109,M,Não Informado,True
+110,F,Não Informado,False
+111,Indefinido,50+,False
+112,M,50+,True
+113,Indefinido,18-25,False
+114,M,18-25,False
+115,F,26-35,False
+116,Indefinido,18-25,False
+117,Indefinido,18-25,True
+118,F,50+,True
+119,Indefinido,26-35,True
+120,M,26-35,True
+121,F,18-25,True
+122,Indefinido,50+,False
+123,M,26-35,True
+124,M,50+,True
+125,Indefinido,50+,False
+126,Indefinido,50+,True
+127,Indefinido,50+,True
+128,F,26-35,True
+129,M,50+,True
+130,M,18-25,True
+131,Indefinido,Não Informado,True
+132,F,26-35,True
+133,F,18-25,True
+134,M,18-25,False
+135,M,26-35,True
+136,M,Não Informado,False
+137,M,18-25,False
+138,F,18-25,False
+139,M,50+,True
+140,Indefinido,Não Informado,True
+141,M,18-25,False
+142,M,26-35,False
+143,M,26-35,False
+144,Indefinido,26-35,False
+145,Indefinido,26-35,False
+146,Indefinido,26-35,True
+147,M,26-35,False
+148,M,Não Informado,False
+149,Indefinido,18-25,True
+150,Indefinido,Não Informado,True
+151,F,50+,False
+152,M,26-35,False
+153,F,18-25,True
+154,M,18-25,True
+155,M,Não Informado,True
+156,Indefinido,26-35,False
+157,F,50+,True
+158,M,18-25,True
+159,F,50+,False
+160,Indefinido,26-35,True
+161,F,50+,True
+162,M,Não Informado,False
+163,F,50+,True
+164,F,Não Informado,False
+165,F,26-35,False
+166,F,Não Informado,True
+167,F,18-25,False
+168,F,Não Informado,False
+169,F,Não Informado,False
+170,Indefinido,26-35,True
+171,Indefinido,18-25,False
+172,M,26-35,False
+173,Indefinido,Não Informado,True
+174,Indefinido,Não Informado,False
+175,Indefinido,18-25,False
+176,F,26-35,True
+177,Indefinido,50+,True
+178,Indefinido,Não Informado,False
+179,M,Não Informado,True
+180,F,Não Informado,False
+181,F,50+,False
+182,F,18-25,False
+183,Indefinido,50+,False
+184,M,50+,False
+185,Indefinido,50+,True
+186,M,Não Informado,False
+187,F,18-25,True
+188,Indefinido,26-35,True
+189,F,Não Informado,False
+190,F,26-35,False
+191,F,Não Informado,True
+192,F,Não Informado,False
+193,F,18-25,True
+194,Indefinido,26-35,True
+195,Indefinido,18-25,False
+196,M,50+,False
+197,F,26-35,False
+198,Indefinido,18-25,True
+199,Indefinido,18-25,True
+200,M,26-35,True
+201,M,Não Informado,False
+202,Indefinido,18-25,True
+203,M,50+,False
+204,F,26-35,True
+205,M,18-25,False
+206,Indefinido,50+,True
+207,F,Não Informado,True
+208,Indefinido,18-25,True
+209,F,50+,False
+210,M,Não Informado,False
+211,M,Não Informado,False
+212,Indefinido,18-25,True
+213,F,18-25,False
+214,F,50+,False
+215,M,26-35,True
+216,M,18-25,False
+217,M,18-25,False
+218,F,50+,True
+219,F,18-25,False
+220,Indefinido,Não Informado,False
+221,Indefinido,50+,False
+222,F,18-25,False
+223,Indefinido,26-35,True
+224,M,18-25,True
+225,M,50+,True
+226,M,50+,True
+227,F,50+,False
+228,Indefinido,26-35,False
+229,M,26-35,True
+230,Indefinido,50+,False
+231,Indefinido,26-35,False
+232,M,50+,True
+233,Indefinido,18-25,False
+234,F,Não Informado,False
+235,M,50+,True
+236,F,Não Informado,True
+237,M,50+,True
+238,F,18-25,False
+239,Indefinido,Não Informado,True
+240,F,18-25,False
+241,M,26-35,True
+242,M,26-35,True
+243,F,18-25,False
+244,F,26-35,True
+245,F,50+,True
+246,M,18-25,False
+247,F,50+,True
+248,M,26-35,True
+249,F,Não Informado,False
+250,Indefinido,50+,True
+251,M,26-35,True
+252,F,26-35,False
+253,M,18-25,True
+254,Indefinido,50+,False
+255,M,18-25,True
+256,F,18-25,True
+257,F,26-35,False
+258,Indefinido,26-35,False
+259,F,50+,False
+260,M,Não Informado,False
+261,Indefinido,50+,True
+262,F,Não Informado,True
+263,F,50+,False
+264,M,Não Informado,True
+265,M,Não Informado,True
+266,F,Não Informado,False
+267,Indefinido,50+,False
+268,Indefinido,Não Informado,True
+269,Indefinido,18-25,True
+270,F,18-25,False
+271,M,Não Informado,False
+272,Indefinido,Não Informado,False
+273,F,Não Informado,False
+274,M,50+,True
+275,Indefinido,18-25,True
+276,Indefinido,Não Informado,False
+277,M,Não Informado,False
+278,Indefinido,18-25,True
+279,F,Não Informado,False
+280,Indefinido,50+,True
+281,M,18-25,True
+282,Indefinido,50+,True
+283,M,18-25,True
+284,M,50+,False
+285,F,Não Informado,True
+286,F,50+,False
+287,M,Não Informado,True
+288,M,18-25,True
+289,Indefinido,Não Informado,True
+290,Indefinido,Não Informado,False
+291,F,18-25,True
+292,F,Não Informado,True
+293,M,18-25,True
+294,Indefinido,50+,False
+295,F,18-25,False
+296,F,26-35,True
+297,M,Não Informado,False
+298,F,18-25,False
+299,M,50+,False
+300,F,18-25,True
+301,F,Não Informado,True
+302,M,Não Informado,False
+303,M,50+,True
+304,F,50+,False
+305,F,Não Informado,True
+306,F,50+,True
+307,F,50+,False
+308,M,26-35,False
+309,F,18-25,False
+310,Indefinido,50+,True
+311,F,26-35,True
+312,M,50+,True
+313,M,Não Informado,False
+314,Indefinido,26-35,True
+315,Indefinido,Não Informado,True
+316,F,50+,True
+317,F,50+,True
+318,F,26-35,False
+319,Indefinido,Não Informado,True
+320,M,Não Informado,True
+321,M,Não Informado,True
+322,Indefinido,50+,False
+323,M,26-35,True
+324,M,26-35,True
+325,F,50+,True
+326,M,18-25,True
+327,M,26-35,True
+328,M,50+,False
+329,F,Não Informado,True
+330,M,50+,False
+331,M,18-25,True
+332,M,50+,False
+333,M,26-35,False
+334,Indefinido,26-35,False
+335,F,18-25,True
+336,M,Não Informado,False
+337,Indefinido,50+,True
+338,M,50+,True
+339,M,Não Informado,False
+340,F,50+,True
+341,Indefinido,26-35,False
+342,M,18-25,True
+343,F,Não Informado,True
+344,Indefinido,50+,True
+345,Indefinido,50+,True
+346,F,50+,True
+347,M,Não Informado,True
+348,Indefinido,Não Informado,True
+349,F,26-35,True
+350,M,18-25,True
+351,Indefinido,50+,False
+352,Indefinido,26-35,True
+353,F,50+,True
+354,Indefinido,26-35,True
+355,Indefinido,Não Informado,False
+356,F,50+,False
+357,M,50+,False
+358,Indefinido,Não Informado,False
+359,F,18-25,True
+360,M,50+,False
+361,M,Não Informado,False
+362,M,18-25,False
+363,Indefinido,50+,False
+364,F,18-25,True
+365,M,26-35,True
+366,F,26-35,False
+367,Indefinido,26-35,True
+368,M,26-35,False
+369,Indefinido,Não Informado,False
+370,Indefinido,18-25,False
+371,Indefinido,Não Informado,False
+372,F,26-35,False
+373,Indefinido,18-25,False
+374,Indefinido,18-25,False
+375,Indefinido,18-25,True
+376,Indefinido,26-35,True
+377,F,50+,True
+378,Indefinido,26-35,False
+379,F,26-35,True
+380,Indefinido,Não Informado,False
+381,Indefinido,18-25,True
+382,Indefinido,18-25,False
+383,F,18-25,True
+384,Indefinido,50+,True
+385,Indefinido,50+,False
+386,M,18-25,False
+387,M,26-35,True
+388,F,18-25,True
+389,Indefinido,26-35,True
+390,M,26-35,False
+391,F,26-35,True
+392,F,50+,False
+393,F,26-35,True
+394,Indefinido,50+,False
+395,Indefinido,50+,True
+396,Indefinido,18-25,False
+397,Indefinido,26-35,False
+398,F,50+,True
+399,M,50+,False
+400,Indefinido,Não Informado,False
+401,F,26-35,True
+402,F,50+,True
+403,Indefinido,26-35,False
+404,F,Não Informado,False
+405,M,18-25,True
+406,F,50+,False
+407,F,50+,False
+408,M,18-25,True
+409,F,50+,False
+410,Indefinido,50+,True
+411,F,18-25,True
+412,F,Não Informado,False
+413,M,Não Informado,True
+414,Indefinido,26-35,False
+415,M,18-25,True
+416,F,Não Informado,True
+417,F,18-25,False
+418,M,26-35,True
+419,Indefinido,Não Informado,True
+420,F,18-25,True
+421,Indefinido,18-25,True
+422,M,50+,False
+423,Indefinido,26-35,False
+424,M,18-25,True
+425,F,50+,True
+426,M,26-35,False
+427,Indefinido,50+,True
+428,Indefinido,18-25,True
+429,Indefinido,18-25,True
+430,Indefinido,50+,False
+431,Indefinido,18-25,True
+432,F,50+,True
+433,F,18-25,True
+434,F,Não Informado,True
+435,F,Não Informado,True
+436,Indefinido,Não Informado,True
+437,M,Não Informado,False
+438,F,18-25,False
+439,Indefinido,Não Informado,False
+440,M,26-35,True
+441,Indefinido,50+,True
+442,F,26-35,False
+443,Indefinido,26-35,False
+444,M,26-35,False
+445,F,18-25,False
+446,M,18-25,True
+447,M,50+,False
+448,M,50+,True
+449,Indefinido,50+,True
+450,F,18-25,True
+451,M,26-35,False
+452,F,26-35,True
+453,M,26-35,True
+454,M,50+,True
+455,Indefinido,18-25,False
+456,M,26-35,False
+457,Indefinido,18-25,False
+458,Indefinido,26-35,True
+459,F,50+,True
+460,F,26-35,False
+461,Indefinido,Não Informado,True
+462,F,50+,False
+463,Indefinido,26-35,False
+464,Indefinido,26-35,False
+465,F,26-35,True
+466,M,26-35,True
+467,Indefinido,50+,False
+468,F,Não Informado,True
+469,F,26-35,True
+470,Indefinido,Não Informado,False
+471,Indefinido,18-25,False
+472,Indefinido,Não Informado,True
+473,F,Não Informado,False
+474,M,26-35,False
+475,F,18-25,True
+476,F,26-35,False
+477,Indefinido,Não Informado,True
+478,M,26-35,True
+479,Indefinido,26-35,True
+480,M,18-25,False
+481,M,26-35,True
+482,F,18-25,False
+483,Indefinido,50+,True
+484,Indefinido,26-35,True
+485,Indefinido,26-35,True
+486,F,18-25,True
+487,F,18-25,False
+488,F,18-25,False
+489,Indefinido,50+,True
+490,Indefinido,18-25,False
+491,Indefinido,Não Informado,True
+492,M,50+,True
+493,Indefinido,18-25,False
+494,F,26-35,False
+495,F,Não Informado,False
+496,M,26-35,False
+497,M,50+,False
+498,F,18-25,True
+499,M,Não Informado,True
+500,Indefinido,26-35,True
