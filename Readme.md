@@ -1,10 +1,15 @@
+
+
+
 📊 Análise Comercial, CRM e Impacto de Campanhas Sazonais
 
 Projeto de Data Analytics com foco em performance comercial, comportamento de consumo e impacto de campanhas sazonais, integrando análise de ticket médio, categorias estratégicas e oportunidades de CRM.
 
+O objetivo central foi transformar dados transacionais em direcionamento estratégico acionável para Marketing, CRM e Planejamento Comercial.
+
 🎯 Objetivo do Projeto
 
-Identificar padrões de compra, comportamento por canal e oportunidades estratégicas para:
+Identificar padrões de compra e oportunidades estratégicas para:
 
 Aumentar Ticket Médio
 
@@ -23,45 +28,155 @@ Explore os principais KPIs de Performance, CRM e Portfólio no dashboard interat
 
 🔗 **[Acesse o Dashboard Interativo no Tableau Public](https://public.tableau.com/views/VisoGeraldePerformance/Capa?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
-🧩 Metodologia
+🏗️ Arquitetura de Dados
 
-O projeto foi estruturado em quatro etapas principais:
+O pipeline foi estruturado seguindo o conceito de Multi-hop Architecture (RAW → TRUSTED → GOLD), garantindo rastreabilidade, governança e confiabilidade analítica.
 
-1️⃣ Tratamento e Preparação de Dados
+🔄 Processo ETL & Modelagem
+1️⃣ RAW — Camada de Dados Brutos
 
-Normalização de nomes e categorias
+Armazena dados simulando sistemas transacionais (PDV e e-commerce), preservando a integridade original para auditoria.
 
-Aplicação de regras de negócio
+2️⃣ STAGING / TRUSTED — Camada Tratada
 
-Tratamento de valores nulos e inconsistências
+Transformações realizadas via Python (Pandas):
 
-Criação de métricas estratégicas
+Padronização de textos
 
-2️⃣ Modelagem e Análise
+Tratamento de valores nulos
 
-Análise de ticket médio por canal e data
+Conversão de tipos numéricos
+
+Validação de métricas financeiras
+
+Remoção de inconsistências
+
+3️⃣ GOLD — Camada Analítica
+
+Consolidação das dimensões e fato em uma tabela denormalizada:
+
+sales_complete_clean
+
+Foco em:
+
+Integridade referencial
+
+Padronização financeira
+
+Reprodutibilidade
+
+Performance analítica
+
+🛠️ Engenharia de Dados com SQL
+
+A camada analítica foi construída com foco em:
+
+Validação de hipóteses de negócio
+
+Uso de CTEs
+
+Window Functions
+
+Curva ABC de produtos
 
 Segmentação de clientes
 
-Análise de concentração de receita por categoria
+Análise de CRM e fidelização
 
-Interpretação comportamental de consumo
+🧩 Metodologia Analítica
 
-3️⃣ Análise de Performance por Canal
+O projeto foi estruturado em quatro frentes:
 
-Comparativo E-commerce vs Loja Física
+1️⃣ Tratamento e Qualidade de Dados
 
-Identificação de padrões sazonais
+Garantia de consistência antes da análise.
 
-Avaliação de intenção de compra
+2️⃣ Modelagem de Métricas
+
+Construção de KPIs alinhados ao impacto comercial real.
+
+3️⃣ Segmentação Comportamental
+
+Análise por canal, sazonalidade e fidelização.
 
 4️⃣ Geração de Insights Estratégicos
 
-Recomendações comerciais
+Transformação de dados em recomendações acionáveis.
 
-Sugestões de testes A/B
+📊 Performance Sazonal — Impacto por Canal
+🛍️ E-commerce
 
-Estratégias de reativação via CRM
+Dia das Mães — R$ 408,57 (maior média diária do canal)
+
+Indica forte intenção de compra qualificada no online, especialmente associada a kits e produtos premium.
+
+Black Friday — R$ 285,74 (pior desempenho entre campanhas no canal online)
+
+🏬 Loja Física
+
+Black Friday — R$ 493,76 (maior média diária entre campanhas)
+
+🔎 Gap Estratégico Black Friday
+
+A média diária da Loja Física na Black Friday (R$ 493,76) é aproximadamente:
+
+R$ 208,02 superior ao E-commerce
+
+72,8% acima do desempenho do canal online
+
+O E-commerce performa 42,1% abaixo da loja física
+
+🎯 Interpretação Estratégica
+
+Existe um desalinhamento entre estímulo promocional e captura de valor no canal digital.
+
+Enquanto a loja física captura compras de maior valor agregado e comportamento oportunista presencial, o e-commerce apresenta:
+
+Maior fragmentação de compra
+
+Maior sensibilidade a preço
+
+Menor aproveitamento de bundles
+
+Isso representa uma oportunidade clara de otimização estratégica.
+
+📲 Estratégia Recomendada — Mensageria para Aumentar Ticket Médio no E-commerce
+
+Dado o gap de 42% entre canais, recomenda-se ativação de mensageria personalizada pré e durante a Black Friday:
+
+1️⃣ WhatsApp / SMS Personalizado
+
+Acesso antecipado exclusivo
+
+Kits recomendados com base no histórico
+
+Benefício progressivo por faixa de valor
+
+2️⃣ Upsell Automatizado
+
+Bundle complementar no carrinho
+
+Frete grátis acima de ticket alvo
+
+Brinde premium para pedidos acima de determinado valor
+
+3️⃣ Segmentação Inteligente
+
+Clientes premium → foco em kits exclusivos
+
+Clientes sensíveis a preço → progressão de desconto
+
+Não fidelizados → incentivo de recompra
+
+Objetivo:
+
+Reduzir o gap entre canais
+
+Aumentar ticket médio digital
+
+Melhorar margem via bundles
+
+Reduzir dependência do canal físico
 
 👥 Análise da Base de Clientes
 
@@ -73,45 +188,13 @@ Alta oportunidade de retenção
 
 Potencial aumento de LTV
 
+Redução da dependência de aquisição paga
+
 Espaço para campanhas de reengajamento
-
-Redução de dependência de aquisição paga
-
-🌹 Performance Sazonal — Datas Estratégicas
-🎯 Ticket Médio por Data
-🛍️ E-commerce
-
-Dia das Mães: R$ 595,34 (maior ticket médio diário)
-
-Black Friday: R$ 539,72 (5ª maior data em ticket médio)
-
-🏬 Loja Física
-
-Black Friday: R$ 621,78 (maior ticket médio)
-
-Dia das Mães: R$ 582,35 (segunda maior)
-
-🎄 Natal
-
-Apresenta estabilidade de ticket médio entre os canais, indicando comportamento de compra consistente e previsível.
-
-🧠 Interpretação Estratégica
-📌 Dia das Mães
-
-Forte indicador de intenção de compra qualificada, especialmente no e-commerce.
-Alta propensão ao aumento de ticket via kits e produtos premium.
-
-📌 Black Friday
-
-Maior impacto na loja física, sugerindo comportamento orientado à experiência presencial e compras de oportunidade.
-
-📌 Natal
-
-Comportamento omnichannel equilibrado — oportunidade para campanhas integradas.
 
 🎁 Conceito Estratégico: Gift-Giving
 
-Datas como Dia das Mães e Natal seguem o padrão de Gift-Giving, caracterizado por:
+Datas como Dia das Mães e Natal seguem padrão de compra emocional:
 
 Maior disposição a pagar
 
@@ -119,117 +202,67 @@ Menor sensibilidade a preço
 
 Busca por kits e embalagens especiais
 
-Compra emocional
-
-🎯 Estratégias recomendadas
-
-Kits exclusivos premium
-
-Upsell orientado por perfil
-
-Segmentação por tipo de presenteador
-
-Personalização via CRM
-
-🧪 Estratégia de Testes A/B
-
-Para maximizar conversão e ticket médio:
-
-1️⃣ Bundle vs Produto Unitário
-
-Comparar performance de kits com leve incentivo de preço vs itens individuais.
-
-Métricas:
-Ticket médio | Conversão | Margem líquida
-
-2️⃣ Comunicação Emocional vs Funcional
-
-Teste de abordagem de campanha:
-
-Grupo A: Mensagem emocional (presente, carinho, experiência)
-
-Grupo B: Benefício técnico (ingredientes, performance, durabilidade)
-
-Métricas:
-CTR | Receita por usuário | Conversão
-
-3️⃣ Incentivo Comercial
-
-Comparação entre:
-
-Desconto direto
-
-Frete grátis
-
-Brinde exclusivo
-
-🔄 Estratégia de Reativação — Foco no E-commerce
-
-Considerando 34,9% de clientes não fidelizados:
-
-📌 Recomendação
-
-Implementar estratégia de reengajamento antes da Black Friday com:
-
-Mensageria automatizada (WhatsApp, SMS, E-mail via CRM)
-
-Oferta antecipada exclusiva
-
-Gatilhos de escassez controlada
-
-Segmentação por histórico de compra
-
-🎯 Objetivo
-
-Aumentar conversão no canal online
-
-Reduzir dependência de trááfego frio
-
-Melhorar ROI de mídia paga
+Compra orientada a presente
 
 💄 Performance por Categoria — Skincare
 
 Em 2025:
 
-Skincare representa 44,3% da receita total
+44,3% da receita total
 
-Produtos Classe A representam 58,9% da receita da categoria
+58,9% concentrada em produtos Classe A
 
 🔎 Interpretação
 
-Forte concentração em produtos premium
+Forte posicionamento premium
 
-Indício de posicionamento aspiracional
+Indício de elasticidade controlada
 
-Potencial de análise de elasticidade de preço
+Potencial de cross-sell e recorrência
 
-Oportunidade de cross-sell e recorrência
+🔍 Aprendizado Técnico — Controle de Granularidade na Métrica
 
-📈 Recomendações Estratégicas
+Durante a construção do dashboard, identifiquei uma inconsistência na métrica de Receita Média Diária por Campanha.
 
-Intensificar campanhas premium em datas de Gift-Giving
+Inicialmente, o cálculo utilizava:
 
-Estruturar plano de fidelização para reduzir base não fidelizada
+SUM(Receita) / COUNTD(Sale Date)
 
-Aumentar ticket médio no e-commerce na Black Friday
+Ao segmentar por tipo de cliente, o denominador variava conforme os dias em que cada grupo realizou vendas, gerando distorção na comparação.
 
-Explorar modelo omnichannel no Natal
+✅ Correção Aplicada
 
-Realizar análise aprofundada de margem e recorrência em Skincare
+A métrica foi reestruturada utilizando LOD no Tableau:
+
+{ FIXED [Season] : COUNTD(DATETRUNC('day',[Sale Date])) }
+
+Passando a utilizar:
+
+SUM(Receita) / SUM([Dias Totais da Campanha])
+
+Com isso:
+
+O denominador ficou fixo por campanha
+
+Considerando os dois anos da base
+
+Garantindo comparabilidade real entre segmentos
+
+Esse ajuste reforçou a importância do controle de granularidade na modelagem de KPIs estratégicos.
 
 🛠️ Stack Utilizada
 
 Python (ETL e tratamento de dados)
 
-SQL (análises e consultas estratégicas)
+SQL (Modelagem analítica e hipóteses estratégicas)
 
-Power BI (visualização e storytelling de dados)
+Tableau (Visualização e Storytelling)
 
-Modelagem analítica orientada a negócio
+Arquitetura Multi-hop (RAW → TRUSTED → GOLD)
 
 🚀 Conclusão
 
-O projeto demonstra como dados podem ser transformados em direcionamento estratégico real, apoiando decisões de:
+O projeto demonstra como dados transacionais podem ser transformados em direcionamento estratégico real para:
 
 Marketing
 
@@ -237,11 +270,11 @@ CRM
 
 Precificação
 
-Mix de produto
-
 Planejamento sazonal
 
-Mais do que visualizar números, o foco foi gerar insights acionáveis com impacto comercial direto.##
+Gestão de portfólio
+
+Mais do que visualizar números, o foco foi construir métricas robustas, comparáveis e acionáveis, com impacto comercial direto.
 
 
 ## 👨‍💻 Autor
