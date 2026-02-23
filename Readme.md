@@ -1,17 +1,20 @@
-## 📊 Master Plan — Performance de Varejo & Comunicação
-Diagnóstico de Campanhas, KPIs e Portfólio | SQL • Python • Tableau
+📊 Análise Comercial, CRM e Impacto de Campanhas Sazonais
 
-Este projeto simula um ecossistema analítico completo do setor de varejo de beleza e venda direta, com foco em performance comercial, CRM e impacto de comunicações sazonais.
+Projeto de Data Analytics com foco em performance comercial, comportamento de consumo e impacto de campanhas sazonais, integrando análise de ticket médio, categorias estratégicas e oportunidades de CRM.
 
-O objetivo é demonstrar domínio técnico em Engenharia e Análise de Dados, aliado a uma visão estratégica de negócio, conectando:
+🎯 Objetivo do Projeto
 
-Estruturação e modelagem de dados (SQL Avançado)
+Identificar padrões de compra, comportamento por canal e oportunidades estratégicas para:
 
-Automação e tratamento de dados (Python)
+Aumentar Ticket Médio
 
-Aplicação de hipóteses de negócio e validações estatísticas
+Melhorar conversão em datas sazonais
 
-Storytelling executivo orientado à tomada de decisão
+Otimizar estratégias de CRM
+
+Direcionar investimentos em marketing
+
+Identificar categorias de maior impacto na receita
 
 ## 🚀 Visualização do Dashboard
 Explore os principais KPIs de Performance, CRM e Portfólio no dashboard interativo.
@@ -20,165 +23,226 @@ Explore os principais KPIs de Performance, CRM e Portfólio no dashboard interat
 
 🔗 **[Acesse o Dashboard Interativo no Tableau Public](https://public.tableau.com/views/VisoGeraldePerformance/Capa?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
----
+🧩 Metodologia
 
-## 🏗️ Arquitetura de Dados
+O projeto foi estruturado em quatro etapas principais:
 
-O pipeline foi estruturado seguindo o conceito de Multi-hop Architecture (RAW → TRUSTED → GOLD), garantindo rastreabilidade, governança e confiabilidade analítica.
+1️⃣ Tratamento e Preparação de Dados
 
-🔄 Processo ETL & Modelagem
+Normalização de nomes e categorias
 
-1️⃣ RAW — Camada de Dados Brutos
-Armazena dados sintéticos simulando sistemas transacionais (PDV e e-commerce), preservando a integridade original para auditoria.
+Aplicação de regras de negócio
 
-2️⃣ STAGING / TRUSTED — Camada Tratada
-Transformações realizadas via Python (Pandas):
+Tratamento de valores nulos e inconsistências
 
-Padronização de textos
+Criação de métricas estratégicas
 
-Tratamento de valores nulos
+2️⃣ Modelagem e Análise
 
-Conversão de tipos numéricos
+Análise de ticket médio por canal e data
 
-Validação de métricas financeiras
+Segmentação de clientes
 
-Remoção de inconsistências
+Análise de concentração de receita por categoria
 
-3️⃣ GOLD — Camada Analítica
-Consolidação das dimensões e fato em uma tabela denormalizada:
+Interpretação comportamental de consumo
 
-sales_complete_clean
+3️⃣ Análise de Performance por Canal
 
-## 🎯 Diferencial Técnico
+Comparativo E-commerce vs Loja Física
 
-A decisão por uma tabela Gold denormalizada foi estratégica:
+Identificação de padrões sazonais
 
-Redução de custo computacional no Tableau
+Avaliação de intenção de compra
 
-Eliminação de joins em tempo de visualização
+4️⃣ Geração de Insights Estratégicos
 
-Métricas financeiras pré-calculadas
+Recomendações comerciais
 
-Ganho de performance e escalabilidade analítica
+Sugestões de testes A/B
 
-Essa abordagem simula o padrão utilizado em ambientes corporativos com foco em BI de alta performance.
+Estratégias de reativação via CRM
 
-## 💾 Engenharia de Dados com SQL
+👥 Análise da Base de Clientes
 
-A camada analítica foi construída com foco em:
+Clientes não fidelizados representam 34,9% da base ativa.
 
-Integridade referencial
+🔎 Implicações Estratégicas
 
-Padronização de dados financeiros
+Alta oportunidade de retenção
 
-Validação de hipóteses de negócio
+Potencial aumento de LTV
 
-Reprodutibilidade do pipeline
+Espaço para campanhas de reengajamento
 
-## 🏗️ Estrutura de Scripts
+Redução de dependência de aquisição paga
 
-📁 01_setup_stg.sql
+🌹 Performance Sazonal — Datas Estratégicas
+🎯 Ticket Médio por Data
+🛍️ E-commerce
 
-Criação das tabelas
+Dia das Mães: R$ 595,34 (maior ticket médio diário)
 
-Implementação de Primary Keys / Foreign Keys
+Black Friday: R$ 539,72 (5ª maior data em ticket médio)
 
-Tipos DECIMAL(12,2) para precisão financeira
+🏬 Loja Física
 
-📁 02_data_cleaning_analytics.sql
+Black Friday: R$ 621,78 (maior ticket médio)
 
-Transformações SQL
+Dia das Mães: R$ 582,35 (segunda maior)
 
-Uso de REGEXP_REPLACE para limpeza
+🎄 Natal
 
-Criação da tabela Gold consolidada
+Apresenta estabilidade de ticket médio entre os canais, indicando comportamento de compra consistente e previsível.
 
-📁 03_business_hypotheses.sql
+🧠 Interpretação Estratégica
+📌 Dia das Mães
 
-Validação de 10+ hipóteses estratégicas
+Forte indicador de intenção de compra qualificada, especialmente no e-commerce.
+Alta propensão ao aumento de ticket via kits e produtos premium.
 
-Uso de CTEs
+📌 Black Friday
 
-Aplicação de Window Functions
+Maior impacto na loja física, sugerindo comportamento orientado à experiência presencial e compras de oportunidade.
 
-Curva ABC de produtos
+📌 Natal
 
-Análises de CRM e fidelização
+Comportamento omnichannel equilibrado — oportunidade para campanhas integradas.
 
-## 📊 Principais KPIs & Insights Estratégicos
-💎 1. Gestão de CRM
+🎁 Conceito Estratégico: Gift-Giving
 
-Insight:
-Clientes "Não Identificados" representam 32,3% da receita total.
+Datas como Dia das Mães e Natal seguem o padrão de Gift-Giving, caracterizado por:
 
-Interpretação Estratégica:
-Existe uma oportunidade clara de expansão de LTV por meio de melhoria na captura de dados no PDV e estratégias de conversão para programas de fidelidade.
+Maior disposição a pagar
 
-🌸 2. Sazonalidade & Comunicação
+Menor sensibilidade a preço
 
-Insight:
+Busca por kits e embalagens especiais
 
-Dia das Mães lidera em volume de vendas.
+Compra emocional
 
-Dia dos Namorados apresenta maior ticket médio (R$ 608,36).
+🎯 Estratégias recomendadas
 
-Interpretação Estratégica:
-Clientes sazonais possuem alto potencial de gasto, sendo ideais para:
+Kits exclusivos premium
 
-Testes A/B de fluxos personalizados
+Upsell orientado por perfil
 
-Campanhas de “Gift-Giving”
+Segmentação por tipo de presenteador
 
-Estratégias de reativação em datas secundárias
+Personalização via CRM
 
-🧴 3. Portfólio & Margem
+🧪 Estratégia de Testes A/B
 
-Insight:
-Skincare representa 36,8% da receita, com melhor margem média.
+Para maximizar conversão e ticket médio:
 
-Interpretação Estratégica:
-Categoria prioritária para:
+1️⃣ Bundle vs Produto Unitário
 
-Modelos de recorrência
+Comparar performance de kits com leve incentivo de preço vs itens individuais.
 
-Programas de reposição automática
+Métricas:
+Ticket médio | Conversão | Margem líquida
 
-Estratégias de fidelização baseadas em hábito
+2️⃣ Comunicação Emocional vs Funcional
 
-## 🧠 Conceitos Aplicados
+Teste de abordagem de campanha:
 
-Modelagem Dimensional (Star Schema)
+Grupo A: Mensagem emocional (presente, carinho, experiência)
 
-Multi-hop Data Architecture
+Grupo B: Benefício técnico (ingredientes, performance, durabilidade)
 
-Curva ABC
+Métricas:
+CTR | Receita por usuário | Conversão
 
-Análise de Retenção
+3️⃣ Incentivo Comercial
 
-LTV (conceitual)
+Comparação entre:
 
-Experimentação (Testes A/B simulados)
+Desconto direto
 
-Storytelling Executivo
+Frete grátis
 
-Governança e padronização de métricas
+Brinde exclusivo
 
-## 🛠️ Tecnologias Utilizadas
-Tecnologia	Aplicação
-SQL Avançado	Modelagem, CTEs, Window Functions, Regex, Denormalização
-Python (Pandas)	ETL, limpeza, padronização e automações
-Tableau	Dashboards executivos e Data Storytelling
-Markdown	Documentação técnica e governança
-🎯 Competências Demonstradas
+🔄 Estratégia de Reativação — Foco no E-commerce
 
-✔ Estruturação de dados a partir de múltiplas fontes
-✔ Criação de tabelas analíticas para dashboards executivos
-✔ Automação de processos de tratamento de dados
-✔ Validação de hipóteses de negócio via SQL
-✔ Construção de materiais executivos orientados à liderança
-✔ Diagnóstico de KPIs e direcionamento estratégico
-✔ Interface entre áreas (CRM, Marketing, Comercial e Produto)
----
+Considerando 34,9% de clientes não fidelizados:
+
+📌 Recomendação
+
+Implementar estratégia de reengajamento antes da Black Friday com:
+
+Mensageria automatizada (WhatsApp, SMS, E-mail via CRM)
+
+Oferta antecipada exclusiva
+
+Gatilhos de escassez controlada
+
+Segmentação por histórico de compra
+
+🎯 Objetivo
+
+Aumentar conversão no canal online
+
+Reduzir dependência de trááfego frio
+
+Melhorar ROI de mídia paga
+
+💄 Performance por Categoria — Skincare
+
+Em 2025:
+
+Skincare representa 44,3% da receita total
+
+Produtos Classe A representam 58,9% da receita da categoria
+
+🔎 Interpretação
+
+Forte concentração em produtos premium
+
+Indício de posicionamento aspiracional
+
+Potencial de análise de elasticidade de preço
+
+Oportunidade de cross-sell e recorrência
+
+📈 Recomendações Estratégicas
+
+Intensificar campanhas premium em datas de Gift-Giving
+
+Estruturar plano de fidelização para reduzir base não fidelizada
+
+Aumentar ticket médio no e-commerce na Black Friday
+
+Explorar modelo omnichannel no Natal
+
+Realizar análise aprofundada de margem e recorrência em Skincare
+
+🛠️ Stack Utilizada
+
+Python (ETL e tratamento de dados)
+
+SQL (análises e consultas estratégicas)
+
+Power BI (visualização e storytelling de dados)
+
+Modelagem analítica orientada a negócio
+
+🚀 Conclusão
+
+O projeto demonstra como dados podem ser transformados em direcionamento estratégico real, apoiando decisões de:
+
+Marketing
+
+CRM
+
+Precificação
+
+Mix de produto
+
+Planejamento sazonal
+
+Mais do que visualizar números, o foco foi gerar insights acionáveis com impacto comercial direto.##
+
 
 ## 👨‍💻 Autor
 **Victor Biscaia**
