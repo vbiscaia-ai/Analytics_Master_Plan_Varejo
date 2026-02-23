@@ -8,7 +8,7 @@ Este projeto simula um ecossistema analítico completo do setor de varejo de bel
 ## 🚀 Visualização do Dashboard
 Explore os principais KPIs de Performance, CRM e Portfólio no dashboard interativo.
 
-![Dashboard Preview](./assets/01_print_dashboard.png)
+![Dashboard Preview](./assets/01_print_dashboard.png.png)
 
 🔗 **[Acesse o Dashboard Interativo no Tableau Public](https://public.tableau.com/views/VisoGeraldePerformance/Capa?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
