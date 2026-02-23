@@ -966,7 +966,7 @@
         <drill-path name='state, city' />
       </drill-paths>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='Data/TableauTemp/#TableauTemp_0iz5lfc0pu0kd41gjfced15xuwk3.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/19/2026 03:22:41 AM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='Data/TableauTemp/#TableauTemp_02636zp0xd2ptd0zkdg3t1eb7tld.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/19/2026 02:31:55 AM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <metadata-records>
             <metadata-record class='column'>
@@ -1891,7 +1891,7 @@
             <column-instance column='[sale_date]' derivation='Year' name='[yr:sale_date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Category)]'>
-            <groupfilter function='level-members' level='[category]' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[category]' member='&quot;Skincare&quot;' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Product Name)]'>
             <groupfilter function='level-members' level='[product_name]' user:ui-action-filter='[Action13_16B75E9EF5A34E8EA2424FB5FB1A4A98]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -2038,7 +2038,7 @@
             <column-instance column='[sale_date]' derivation='Year' name='[yr:sale_date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Category)]'>
-            <groupfilter function='level-members' level='[category]' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[category]' member='&quot;Skincare&quot;' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Subcategoria)]'>
             <groupfilter function='level-members' level='[subcategory]' user:ui-action-filter='[Action15_977BAC82B5AD47D986721D3633647532]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -2254,7 +2254,7 @@
             <groupfilter function='level-members' level='[month_name]' user:ui-action-filter='[Action8_DC4347C07038428B8E73F5073FEFD377]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[:Measure Names]</column>
@@ -2653,7 +2653,7 @@
             </dictionary>
           </manual-sort>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Category)]'>
-            <groupfilter function='level-members' level='[category]' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[category]' member='&quot;Skincare&quot;' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Product Name)]'>
             <groupfilter function='level-members' level='[product_name]' user:ui-action-filter='[Action13_16B75E9EF5A34E8EA2424FB5FB1A4A98]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -2812,9 +2812,9 @@
             <column-instance column='[Calculation_0414827874791431]' derivation='Sum' name='[sum:Calculation_0414827874791431:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name,Estado)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action10_851302AE88404D83A388FA3304CF6416]' user:ui-enumeration='all' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[channel_name]' />
-              <groupfilter function='level-members' level='[state]' />
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action10_851302AE88404D83A388FA3304CF6416]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[channel_name]' member='&quot;Loja FÃ­sica&quot;' />
+              <groupfilter function='member' level='[state]' member='&quot;MS&quot;' />
             </groupfilter>
           </filter>
           <slices>
@@ -2983,9 +2983,9 @@
             <column-instance column='[Calculation_0414827874791431]' derivation='Sum' name='[sum:Calculation_0414827874791431:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name,Estado)]'>
-            <groupfilter function='crossjoin' user:ui-action-filter='[Action11_A6C60F9EDF0B48DA907A289EC82C10B0]' user:ui-enumeration='all' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[channel_name]' />
-              <groupfilter function='level-members' level='[state]' />
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action11_A6C60F9EDF0B48DA907A289EC82C10B0]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[channel_name]' member='&quot;Loja FÃ­sica&quot;' />
+              <groupfilter function='member' level='[state]' member='&quot;MS&quot;' />
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Estado)]'>
@@ -3255,7 +3255,7 @@
             <groupfilter function='level-members' level='[month_name]' user:ui-action-filter='[Action8_DC4347C07038428B8E73F5073FEFD377]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <computed-sort column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:channel_name:nk]' direction='DESC' using='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0414827875143689:qk]' />
           <slices>
@@ -3504,7 +3504,7 @@
             <column-instance column='[sale_date]' derivation='Year' name='[yr:sale_date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Category)]'>
-            <groupfilter function='level-members' level='[category]' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[category]' member='&quot;Skincare&quot;' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]'>
             <groupfilter function='level-members' level='[channel_name]' user:ui-action-filter='[Action7_0AEB99DD6CF5433193B1F52B8C359AAB]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -3943,7 +3943,7 @@
             <groupfilter function='level-members' level='[Calculation_0643526920151043]' user:ui-action-filter='[Action6_FF846C1886B74C7A951D6814E0A61970]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]</column>
@@ -4080,7 +4080,7 @@
             <groupfilter function='level-members' level='[month_name]' user:ui-action-filter='[Action8_DC4347C07038428B8E73F5073FEFD377]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:Calculation_0643526920151043:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[sum:Calculation_0414827874791431:qk]' shelf='rows' />
@@ -4178,7 +4178,7 @@
             <column-instance column='[sale_date]' derivation='Year' name='[yr:sale_date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Category)]'>
-            <groupfilter function='level-members' level='[category]' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[category]' member='&quot;Skincare&quot;' user:ui-action-filter='[Action15_6C9E34DBDEB64B649A0CCD0D4022E64E]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Product Name)]'>
             <groupfilter function='level-members' level='[product_name]' user:ui-action-filter='[Action13_16B75E9EF5A34E8EA2424FB5FB1A4A98]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -4476,13 +4476,13 @@
       <size maxheight='860' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='range' />
       <zones>
         <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98000' id='77' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
-            <zone h='98000' id='34' type-v2='layout-basic' w='98666' x='667' y='1000'>
-              <zone h='24000' id='24' param='horz' type-v2='layout-flow' w='98666' x='667' y='75000'>
-                <zone h='24000' id='20' is-fixed='true' type-v2='layout-basic' w='98666' x='667' y='75000'>
-                  <zone h='24000' id='21' param='vert' type-v2='layout-flow' w='98666' x='667' y='75000'>
-                    <zone h='24000' id='9' param='horz' type-v2='layout-flow' w='98666' x='667' y='75000'>
-                      <zone h='21500' id='53' name='Receita por categorias' w='47666' x='667' y='76250'>
+          <zone h='98140' id='77' param='horz' type-v2='layout-flow' w='98666' x='667' y='930'>
+            <zone h='98140' id='34' type-v2='layout-basic' w='98666' x='667' y='930'>
+              <zone h='24035' id='24' param='horz' type-v2='layout-flow' w='98666' x='667' y='75035'>
+                <zone h='24035' id='20' is-fixed='true' type-v2='layout-basic' w='98666' x='667' y='75035'>
+                  <zone h='24035' id='21' param='vert' type-v2='layout-flow' w='98666' x='667' y='75035'>
+                    <zone h='24035' id='9' param='horz' type-v2='layout-flow' w='98666' x='667' y='75035'>
+                      <zone h='21709' id='53' name='Receita por categorias' w='47666' x='667' y='76198'>
                         <layout-cache fixed-size-h='145' minwidth='220' type-h='fixed' type-w='scalable' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
@@ -4491,7 +4491,7 @@
                           <format attr='margin' value='4' />
                         </zone-style>
                       </zone>
-                      <zone h='21500' id='66' name='receita x subcategoria' w='51000' x='48333' y='76250'>
+                      <zone h='21709' id='66' name='receita x subcategoria' w='51000' x='48333' y='76198'>
                         <layout-cache fixed-size-h='376' minwidth='260' type-h='fixed' type-w='scalable' />
                         <zone-style>
                           <format attr='border-color' value='#000000' />
@@ -4511,7 +4511,7 @@
                   </zone>
                 </zone>
               </zone>
-              <zone forceUpdate='true' h='6625' id='31' type-v2='text' w='83666' x='667' y='1000'>
+              <zone forceUpdate='true' h='6634' id='31' type-v2='text' w='83666' x='667' y='930'>
                 <formatted-text>
                   <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Análise Estratégica do Portfólio de Produtos</run>
                 </formatted-text>
@@ -4522,7 +4522,7 @@
                   <format attr='margin' value='0' />
                 </zone-style>
               </zone>
-              <zone forceUpdate='true' h='4000' id='32' type-v2='text' w='98666' x='667' y='7625'>
+              <zone forceUpdate='true' h='4006' id='32' type-v2='text' w='98666' x='667' y='7564'>
                 <formatted-text>
                   <run fontname='Segoe UI'>Avaliação da concentração de receita, comportamento de clientes e participação das subcategorias no desempenho comercial.</run>
                 </formatted-text>
@@ -4538,8 +4538,8 @@
                   <format attr='padding' value='0' />
                 </zone-style>
               </zone>
-              <zone h='20750' id='56' param='horz' type-v2='layout-flow' w='98666' x='667' y='11625'>
-                <zone fixed-size='1133' h='16750' id='57' is-fixed='true' name='KPI clientes e produtos' w='94334' x='2833' y='13625'>
+              <zone h='20779' id='56' param='horz' type-v2='layout-flow' w='98666' x='667' y='11570'>
+                <zone fixed-size='1133' h='17059' id='57' is-fixed='true' name='KPI clientes e produtos' w='94334' x='2833' y='13430'>
                   <layout-cache fixed-size-h='138' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4558,8 +4558,8 @@
                   <format attr='background-color' value='#c0c0c084' />
                 </zone-style>
               </zone>
-              <zone h='27500' id='71' param='horz' type-v2='layout-flow' w='98666' x='667' y='47500'>
-                <zone h='25000' id='72' name='Curva ABC(pareto)' w='49958' x='667' y='48750'>
+              <zone h='27539' id='71' param='horz' type-v2='layout-flow' w='98666' x='667' y='47496'>
+                <zone h='25213' id='72' name='Curva ABC(pareto)' w='49958' x='667' y='48659'>
                   <layout-cache minwidth='195' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4568,7 +4568,7 @@
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='25000' id='75' name='% receita por classe' w='48708' x='50625' y='48750'>
+                <zone h='25213' id='75' name='% receita por classe' w='48708' x='50625' y='48659'>
                   <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4586,7 +4586,7 @@
                   <format attr='background-color' value='#a8a8a898' />
                 </zone-style>
               </zone>
-              <zone h='6625' id='106' name='botoes ano' show-title='false' w='15000' x='84333' y='1000'>
+              <zone h='6634' id='106' name='botoes ano' show-title='false' w='15000' x='84333' y='930'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -4594,8 +4594,8 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='15125' id='129' param='horz' type-v2='layout-flow' w='98666' x='667' y='32375'>
-                <zone forceUpdate='true' h='15125' id='130' type-v2='text' w='48666' x='667' y='32375'>
+              <zone h='15147' id='129' param='horz' type-v2='layout-flow' w='98666' x='667' y='32349'>
+                <zone forceUpdate='true' h='15147' id='130' type-v2='text' w='48666' x='667' y='32349'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Dominância de Skincare: Com 36,82% da receita, a categoria de Skincare lidera o portfólio, seguida de perto por Maquiagem (34,09%). Como Skincare geralmente possui maior fidelização e recorrência, o time de marketing deve focar em campanhas de reposição automática para esses itens.</run>
                   </formatted-text>
@@ -4607,7 +4607,7 @@
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='15125' id='131' type-v2='text' w='49999' x='49333' y='32375'>
+                <zone forceUpdate='true' h='15147' id='131' type-v2='text' w='49999' x='49333' y='32349'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Eficiência de Mix: A concentração de receita na Classe C (42,3%) indica que o volume de vendas está em produtos de entrada ou promocionais. Para elevar o ticket médio de R$ 951, é necessário impulsionar produtos da Classe A, possivelmente através de kits de perfumaria fina.</run>
                   </formatted-text>
@@ -4943,10 +4943,10 @@ KPIS e Portfólio de produtos</run>
       <size maxheight='860' maxwidth='1200' minheight='800' minwidth='1200' sizing-mode='range' />
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98000' id='84' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
-            <zone h='98000' id='14' type-v2='layout-basic' w='98666' x='667' y='1000'>
-              <zone h='16875' id='3' param='horz' type-v2='layout-flow' w='98666' x='667' y='82125'>
-                <zone h='16875' id='13' name='Mapa de receita' show-title='false' w='98666' x='667' y='82125'>
+          <zone h='98140' id='84' param='horz' type-v2='layout-flow' w='98666' x='667' y='930'>
+            <zone h='98140' id='14' type-v2='layout-basic' w='98666' x='667' y='930'>
+              <zone h='16900' id='3' param='horz' type-v2='layout-flow' w='98666' x='667' y='82170'>
+                <zone h='16900' id='13' name='Mapa de receita' show-title='false' w='98666' x='667' y='82170'>
                   <layout-cache minwidth='201' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4956,7 +4956,7 @@ KPIS e Portfólio de produtos</run>
                   </zone-style>
                 </zone>
               </zone>
-              <zone forceUpdate='true' h='6875' id='5' type-v2='text' w='98666' x='667' y='1000'>
+              <zone forceUpdate='true' h='6884' id='5' type-v2='text' w='98666' x='667' y='930'>
                 <formatted-text>
                   <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Comparação de Performance por Estado e Canal</run>
                 </formatted-text>
@@ -4967,8 +4967,8 @@ KPIS e Portfólio de produtos</run>
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='22125' id='9' param='horz' type-v2='layout-flow' w='98666' x='667' y='45375'>
-                <zone h='19625' id='10' name='Receita por Canal e estado' w='98666' x='667' y='46625'>
+              <zone h='22157' id='9' param='horz' type-v2='layout-flow' w='98666' x='667' y='45368'>
+                <zone h='19831' id='10' name='Receita por Canal e estado' w='98666' x='667' y='46531'>
                   <layout-cache minwidth='258' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4985,7 +4985,7 @@ KPIS e Portfólio de produtos</run>
                   <format attr='margin-bottom' value='10' />
                 </zone-style>
               </zone>
-              <zone forceUpdate='true' h='4000' id='17' type-v2='text' w='98666' x='667' y='7875'>
+              <zone forceUpdate='true' h='4006' id='17' type-v2='text' w='98666' x='667' y='7814'>
                 <formatted-text>
                   <run fontname='Segoe UI'>Receita, lucratividade e distribuição regional</run>
                 </formatted-text>
@@ -4997,8 +4997,8 @@ KPIS e Portfólio de produtos</run>
                   <format attr='margin-top' value='1' />
                 </zone-style>
               </zone>
-              <zone h='33500' id='81' param='horz' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                <zone h='33500' id='82' name='Receita por Estado — Comparação entre E-commerce e Loja Física' w='98666' x='667' y='11875'>
+              <zone h='33548' id='81' param='horz' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                <zone h='33548' id='82' name='Receita por Estado — Comparação entre E-commerce e Loja Física' w='98666' x='667' y='11820'>
                   <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5014,8 +5014,8 @@ KPIS e Portfólio de produtos</run>
                   <format attr='background-color' value='#a8a8a87c' />
                 </zone-style>
               </zone>
-              <zone h='14625' id='92' param='horz' type-v2='layout-flow' w='98666' x='667' y='67500'>
-                <zone forceUpdate='true' h='14625' id='93' type-v2='text' w='34888' x='667' y='67500'>
+              <zone h='14645' id='92' param='horz' type-v2='layout-flow' w='98666' x='667' y='67525'>
+                <zone forceUpdate='true' h='14645' id='93' type-v2='text' w='34888' x='667' y='67525'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>A concentração de receita na região Sudeste reforça a maturidade do mercado, enquanto regiões com menor representatividade apresentam potencial de crescimento via ações direcionadas e otimização do mix de canais.</run>
                   </formatted-text>
@@ -5027,7 +5027,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone h='14625' id='95' type-v2='text' w='31555' x='35555' y='67500'>
+                <zone h='14645' id='95' type-v2='text' w='31555' x='35555' y='67525'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>A expansão regional deve priorizar mercados com alta margem e menor custo de aquisição, maximizando retorno sobre investimento.</run>
                   </formatted-text>
@@ -5039,7 +5039,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='14625' id='94' type-v2='text' w='32221' x='67110' y='67500'>
+                <zone forceUpdate='true' h='14645' id='94' type-v2='text' w='32221' x='67110' y='67525'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>A diferença de performance entre canais sugere oportunidades de ajuste na estratégia de ativação regional, priorizando investimentos onde a relação receita versus margem demonstra maior eficiência operacional.</run>
                   </formatted-text>
@@ -5282,19 +5282,19 @@ KPIS e Portfólio de produtos</run>
       <size maxheight='860' maxwidth='1200' minheight='800' minwidth='1000' sizing-mode='range' />
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98000' id='167' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
-            <zone h='98000' id='165' type-v2='layout-basic' w='98666' x='667' y='1000'>
-              <zone h='87125' id='111' param='horz' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                <zone h='87125' id='86' type-v2='layout-basic' w='98666' x='667' y='11875'>
-                  <zone h='19000' id='83' param='horz' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                    <zone h='19000' id='61' type-v2='layout-basic' w='98666' x='667' y='11875'>
-                      <zone h='19000' id='58' param='horz' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                        <zone h='19000' id='30' param='vert' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                          <zone h='19000' id='28' param='horz' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                            <zone h='19000' id='8' type-v2='layout-basic' w='98666' x='667' y='11875'>
-                              <zone h='19000' id='23' param='horz' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                                <zone h='19000' id='24' param='vert' type-v2='layout-flow' w='98666' x='667' y='11875'>
-                                  <zone fixed-size='138' h='17250' id='25' is-fixed='true' name='KPI' w='98666' x='667' y='12000'>
+          <zone h='98140' id='167' param='horz' type-v2='layout-flow' w='98666' x='667' y='930'>
+            <zone h='98140' id='165' type-v2='layout-basic' w='98666' x='667' y='930'>
+              <zone h='87250' id='111' param='horz' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                <zone h='87250' id='86' type-v2='layout-basic' w='98666' x='667' y='11820'>
+                  <zone h='19027' id='83' param='horz' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                    <zone h='19027' id='61' type-v2='layout-basic' w='98666' x='667' y='11820'>
+                      <zone h='19027' id='58' param='horz' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                        <zone h='19027' id='30' param='vert' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                          <zone h='19027' id='28' param='horz' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                            <zone h='19027' id='8' type-v2='layout-basic' w='98666' x='667' y='11820'>
+                              <zone h='19027' id='23' param='horz' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                                <zone h='19027' id='24' param='vert' type-v2='layout-flow' w='98666' x='667' y='11820'>
+                                  <zone fixed-size='138' h='16047' id='25' is-fixed='true' name='KPI' w='98666' x='667' y='11936'>
                                     <layout-cache fixed-size-w='1075' type-h='fixed' type-w='fixed' />
                                     <zone-style>
                                       <format attr='border-color' value='#e6e6e6' />
@@ -5322,7 +5322,7 @@ KPIS e Portfólio de produtos</run>
                       </zone>
                     </zone>
                   </zone>
-                  <zone h='27125' id='90' name='Receita por canal' w='49334' x='49999' y='71875'>
+                  <zone h='27164' id='90' name='Receita por canal' w='49334' x='49999' y='71906'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5330,7 +5330,7 @@ KPIS e Portfólio de produtos</run>
                       <format attr='margin' value='4' />
                     </zone-style>
                   </zone>
-                  <zone h='27125' id='109' name='receita por cliente' w='49332' x='667' y='71875'>
+                  <zone h='27164' id='109' name='receita por cliente' w='49332' x='667' y='71906'>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
                       <format attr='border-style' value='none' />
@@ -5338,8 +5338,8 @@ KPIS e Portfólio de produtos</run>
                       <format attr='margin' value='4' />
                     </zone-style>
                   </zone>
-                  <zone h='26625' id='163' param='horz' type-v2='layout-flow' w='98666' x='667' y='45250'>
-                    <zone h='24125' id='164' name='evolução financeira' w='98666' x='667' y='46500'>
+                  <zone h='26664' id='163' param='horz' type-v2='layout-flow' w='98666' x='667' y='45242'>
+                    <zone h='24338' id='164' name='evolução financeira' w='98666' x='667' y='46405'>
                       <layout-cache cell-count-w='12' minheight='178' non-cell-size-w='1' type-h='scalable' type-w='cell' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
@@ -5357,8 +5357,8 @@ KPIS e Portfólio de produtos</run>
                       <format attr='background-color' value='#a8a8a898' />
                     </zone-style>
                   </zone>
-                  <zone h='14375' id='173' param='horz' type-v2='layout-flow' w='98666' x='667' y='30875'>
-                    <zone forceUpdate='true' h='14375' id='174' type-v2='text' w='49000' x='667' y='30875'>
+                  <zone h='14395' id='173' param='horz' type-v2='layout-flow' w='98666' x='667' y='30847'>
+                    <zone forceUpdate='true' h='14395' id='174' type-v2='text' w='49000' x='667' y='30847'>
                       <formatted-text>
                         <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>A margem de 42,94% demonstra saúde operacional, porém a estabilidade do lucro frente à variação da receita sugere uma oportunidade de otimização em custos fixos ou logísticos por canal</run>
                       </formatted-text>
@@ -5370,7 +5370,7 @@ KPIS e Portfólio de produtos</run>
                         <format attr='background-color' value='#a8a8a8' />
                       </zone-style>
                     </zone>
-                    <zone forceUpdate='true' h='14375' id='175' type-v2='text' w='49666' x='49667' y='30875'>
+                    <zone forceUpdate='true' h='14395' id='175' type-v2='text' w='49666' x='49667' y='30847'>
                       <formatted-text>
                         <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>A predominância de clientes não fidelizados na composição da receita, aliada ao volume relevante de registros não identificados, indica potencial de incremento de LTV por meio de estratégias estruturadas de retenção e melhoria na governança de dados. A consolidação da base pode elevar eficiência das comunicações e mensuração de performance.</run>
                       </formatted-text>
@@ -5385,8 +5385,8 @@ KPIS e Portfólio de produtos</run>
                   </zone>
                 </zone>
               </zone>
-              <zone h='6874' id='142' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
-                <zone h='6874' id='143' type-v2='text' w='83999' x='667' y='1000'>
+              <zone h='6883' id='142' param='horz' type-v2='layout-flow' w='98666' x='667' y='930'>
+                <zone h='6883' id='143' type-v2='text' w='83999' x='667' y='930'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='20'>Visão Geral de Performance</run>
                   </formatted-text>
@@ -5397,7 +5397,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='6874' id='144' name='botoes ano' show-title='false' w='14667' x='84666' y='1000'>
+                <zone h='6883' id='144' name='botoes ano' show-title='false' w='14667' x='84666' y='930'>
                   <layout-cache fixed-size-w='168' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5407,8 +5407,8 @@ KPIS e Portfólio de produtos</run>
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='4001' id='145' param='horz' type-v2='layout-flow' w='98666' x='667' y='7874'>
-                <zone h='4001' id='146' type-v2='text' w='98666' x='667' y='7874'>
+              <zone h='4007' id='145' param='horz' type-v2='layout-flow' w='98666' x='667' y='7813'>
+                <zone h='4007' id='146' type-v2='text' w='98666' x='667' y='7813'>
                   <formatted-text>
                     <run>Monitoramento da performance financeira consolidada, destacando evolução temporal e distribuição da receita por categorias e canais.</run>
                   </formatted-text>
@@ -5634,10 +5634,10 @@ KPIS e Portfólio de produtos</run>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98000' id='85' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
             <zone h='98000' id='63' type-v2='layout-basic' w='98666' x='667' y='1000'>
-              <zone h='31125' id='60' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
-                <zone h='31125' id='51' type-v2='layout-basic' w='98666' x='667' y='1000'>
-                  <zone h='20495' id='32' param='vert' type-v2='layout-flow' w='98666' x='667' y='11630'>
-                    <zone fixed-size='131' h='15245' id='33' is-fixed='true' name='KPI campanhas' show-title='false' w='94334' x='2833' y='13630'>
+              <zone h='31123' id='60' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
+                <zone h='31123' id='51' type-v2='layout-basic' w='98666' x='667' y='1000'>
+                  <zone h='20497' id='32' param='vert' type-v2='layout-flow' w='98666' x='667' y='11626'>
+                    <zone fixed-size='131' h='15247' id='33' is-fixed='true' name='KPI campanhas' show-title='false' w='94334' x='2833' y='13626'>
                       <layout-cache fixed-size-w='1116' type-h='fixed' type-w='fixed' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
@@ -5658,7 +5658,7 @@ KPIS e Portfólio de produtos</run>
                       <format attr='background-color' value='#a8a8a889' />
                     </zone-style>
                   </zone>
-                  <zone forceUpdate='true' h='5063' id='41' type-v2='text' w='98666' x='667' y='1625'>
+                  <zone forceUpdate='true' h='5061' id='41' type-v2='text' w='98666' x='667' y='1625'>
                     <formatted-text>
                       <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Performance de Campanhas e Fidelização de Clientes</run>
                     </formatted-text>
@@ -5669,8 +5669,8 @@ KPIS e Portfólio de produtos</run>
                       <format attr='margin' value='0' />
                     </zone-style>
                   </zone>
-                  <zone h='4942' id='94' param='horz' type-v2='layout-flow' w='26166' x='73167' y='6688'>
-                    <zone h='4125' id='96' name='botoes canal2' show-title='false' w='26166' x='73167' y='6688'>
+                  <zone h='4940' id='94' param='horz' type-v2='layout-flow' w='26166' x='73167' y='6686'>
+                    <zone h='4125' id='96' name='botoes canal2' show-title='false' w='26166' x='73167' y='6686'>
                       <layout-cache fixed-size-h='25' fixed-size-w='304' type-h='fixed' type-w='fixed' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
@@ -5680,7 +5680,7 @@ KPIS e Portfólio de produtos</run>
                       </zone-style>
                     </zone>
                   </zone>
-                  <zone h='4942' id='95' type-v2='text' w='72500' x='667' y='6688'>
+                  <zone h='4940' id='95' type-v2='text' w='72500' x='667' y='6686'>
                     <formatted-text>
                       <run fontname='Segoe UI'>Avaliação do impacto das campanhas sazonais</run>
                     </formatted-text>
@@ -5699,8 +5699,8 @@ KPIS e Portfólio de produtos</run>
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='28625' id='61' param='horz' type-v2='layout-flow' w='98666' x='667' y='70375'>
-                <zone h='28625' id='62' name='campanhas e fidelização' w='50541' x='667' y='70375'>
+              <zone h='28627' id='61' param='horz' type-v2='layout-flow' w='98666' x='667' y='70373'>
+                <zone h='28627' id='62' name='campanhas e fidelização' w='50541' x='667' y='70373'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5709,7 +5709,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='28625' id='67' name='scateer' w='48124' x='51208' y='70375'>
+                <zone h='28627' id='67' name='scateer' w='48124' x='51208' y='70373'>
                   <layout-cache minwidth='231' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5719,8 +5719,8 @@ KPIS e Portfólio de produtos</run>
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='25875' id='72' param='horz' type-v2='layout-flow' w='98666' x='667' y='44500'>
-                <zone h='25875' id='73' name='receitax dia, campanha e canal' w='98666' x='667' y='44500'>
+              <zone h='25875' id='72' param='horz' type-v2='layout-flow' w='98666' x='667' y='44498'>
+                <zone h='25875' id='73' name='receitax dia, campanha e canal' w='98666' x='667' y='44498'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5738,9 +5738,9 @@ KPIS e Portfólio de produtos</run>
                   <format attr='background-color' value='#a8a8a87c' />
                 </zone-style>
               </zone>
-              <zone h='12375' id='126' param='horz' type-v2='layout-flow' w='98666' x='667' y='32125'>
-                <zone h='12375' id='127' param='horz' type-v2='layout-flow' w='98666' x='667' y='32125'>
-                  <zone h='12375' id='129' type-v2='text' w='49166' x='667' y='32125'>
+              <zone h='12375' id='126' param='horz' type-v2='layout-flow' w='98666' x='667' y='32123'>
+                <zone h='12375' id='127' param='horz' type-v2='layout-flow' w='98666' x='667' y='32123'>
+                  <zone h='12375' id='129' type-v2='text' w='49166' x='667' y='32123'>
                     <formatted-text>
                       <run bold='true' fontalignment='1' fontcolor='#1f1f1f' fontname='Segoe UI' fontsize='8'>Vencedores Sazonais: O Dia das Mães lidera em receita média diária (R$ 595,34), consolidando-se como a principal alavanca de vendas, superando inclusive o Natal e a Black Friday. Isso valida a força do portfólio de presentes da marca.</run>
                     </formatted-text>
@@ -5752,7 +5752,7 @@ KPIS e Portfólio de produtos</run>
                       <format attr='background-color' value='#a8a8a8' />
                     </zone-style>
                   </zone>
-                  <zone forceUpdate='true' h='12375' id='128' type-v2='text' w='49499' x='49833' y='32125'>
+                  <zone forceUpdate='true' h='12375' id='128' type-v2='text' w='49499' x='49833' y='32123'>
                     <formatted-text>
                       <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>O grupo &quot;Não Identificado&quot; lidera o ticket médio no Dia dos Namorados (R$ 608,36), indicando um perfil de &quot;presenteador de oportunidade&quot;.Oportunidade: Implementar fluxo de boas-vindas pós-campanha para conversão e fidelização desse público.</run>
                     </formatted-text>
@@ -5935,8 +5935,8 @@ KPIS e Portfólio de produtos</run>
       <simple-id uuid='{15802C88-9F02-474B-8746-685862D8A84B}' />
     </dashboard>
   </dashboards>
-  <windows pres-mode='true' saved-dpi-scale-factor='1.5' show-side-pane='false' source-height='44'>
-    <window class='dashboard' maximized='true' name='Capa'>
+  <windows pres-mode='true' show-side-pane='false' source-height='44'>
+    <window class='dashboard' name='Capa'>
       <viewpoints />
       <active id='6' />
       <simple-id uuid='{3B8AA42E-B6C1-4E81-BCAE-F53CC4CFB1FE}' />
@@ -5955,7 +5955,7 @@ KPIS e Portfólio de produtos</run>
         </viewpoint>
         <viewpoint name='receita por cliente' />
       </viewpoints>
-      <active id='172' />
+      <active id='171' />
       <simple-id uuid='{7701EC10-10CE-44F2-9A6C-10AB154562EF}' />
     </window>
     <window class='dashboard' name='Comparação por Estado e Canal'>
@@ -5968,10 +5968,10 @@ KPIS e Portfólio de produtos</run>
         </viewpoint>
         <viewpoint name='Receita por Estado — Comparação entre E-commerce e Loja Física' />
       </viewpoints>
-      <active id='88' />
+      <active id='89' />
       <simple-id uuid='{331B147B-F6A1-4C50-923A-0CBBB8A72DC7}' />
     </window>
-    <window class='dashboard' name='Analise de performance de produtos'>
+    <window class='dashboard' maximized='true' name='Analise de performance de produtos'>
       <viewpoints>
         <viewpoint name='% receita por classe' />
         <viewpoint name='Curva ABC(pareto)'>
@@ -5984,7 +5984,7 @@ KPIS e Portfólio de produtos</run>
         <viewpoint name='botoes ano' />
         <viewpoint name='receita x subcategoria' />
       </viewpoints>
-      <active id='120' />
+      <active id='53' />
       <simple-id uuid='{4D5336E0-C565-4FFF-9630-93ED124CD795}' />
     </window>
     <window class='dashboard' name='campanhas'>
@@ -5997,7 +5997,7 @@ KPIS e Portfólio de produtos</run>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='117' />
+      <active id='96' />
       <simple-id uuid='{661DED02-2EDF-414F-B16B-6FBC59F9A0AA}' />
     </window>
     <window class='worksheet' hidden='true' name='% receita por classe'>

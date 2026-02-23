@@ -26,7 +26,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='VisoGeraldePerformance' path='/workbooks' revision='1.0' />
+  <repository-location id='VisoGeraldePerformance' path='/workbooks' revision='1.6' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -593,6 +593,12 @@
           <table-calc ordering-type='Rows' />
         </calculation>
       </column>
+      <column caption='Dias totais da campanha' datatype='integer' name='[Calculation_0400539071041536]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [season] : COUNTD(DATETRUNC(&apos;day&apos;,[sale_date])) }' />
+      </column>
+      <column caption='Receita media diaria(impacto campanha)' datatype='real' default-format='c&quot;R$ &quot;#,##0.00;-&quot;R$ &quot;#,##0.00' name='[Calculation_0400539071295489]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_0414827874791431])&#13;&#10;/&#13;&#10;SUM({ FIXED [season] : COUNTD(DATETRUNC(&apos;day&apos;,[sale_date])) })' />
+      </column>
       <column caption='receita líquida' datatype='real' name='[Calculation_0414827860504576]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='FLOAT(TRIM([net_revenue]))' />
       </column>
@@ -966,7 +972,7 @@
         <drill-path name='state, city' />
       </drill-paths>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='Data/TableauTemp/#TableauTemp_0iz5lfc0pu0kd41gjfced15xuwk3.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/19/2026 03:22:41 AM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='Data/TableauTemp/#TableauTemp_02636zp0xd2ptd0zkdg3t1eb7tld.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <metadata-records>
             <metadata-record class='column'>
@@ -981,7 +987,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>1000</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>product_id</remote-name>
@@ -995,7 +1000,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>50</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>store_id</remote-name>
@@ -1009,7 +1013,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>15</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>customer_id</remote-name>
@@ -1023,7 +1026,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>286</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>channel_id</remote-name>
@@ -1037,7 +1039,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>sale_date</remote-name>
@@ -1051,7 +1052,6 @@
               <aggregation>Year</aggregation>
               <approx-count>556</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>year</remote-name>
@@ -1065,7 +1065,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>month</remote-name>
@@ -1079,7 +1078,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>12</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>month_name</remote-name>
@@ -1094,7 +1092,6 @@
               <approx-count>12</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>quarter</remote-name>
@@ -1108,7 +1105,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>4</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>season</remote-name>
@@ -1123,7 +1119,6 @@
               <approx-count>6</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>is_weekend</remote-name>
@@ -1137,7 +1132,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>product_name</remote-name>
@@ -1152,7 +1146,6 @@
               <approx-count>50</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>brand</remote-name>
@@ -1167,7 +1160,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>category</remote-name>
@@ -1182,7 +1174,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>subcategory</remote-name>
@@ -1197,7 +1188,6 @@
               <approx-count>15</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>store_name</remote-name>
@@ -1212,7 +1202,6 @@
               <approx-count>15</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>region</remote-name>
@@ -1227,7 +1216,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>state</remote-name>
@@ -1242,7 +1230,6 @@
               <approx-count>9</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>city</remote-name>
@@ -1257,7 +1244,6 @@
               <approx-count>9</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>gender</remote-name>
@@ -1272,7 +1258,6 @@
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>age_group</remote-name>
@@ -1287,7 +1272,6 @@
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>loyalty_flag</remote-name>
@@ -1301,7 +1285,6 @@
               <aggregation>Count</aggregation>
               <approx-count>3</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>channel_name</remote-name>
@@ -1316,7 +1299,6 @@
               <approx-count>2</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>quantity</remote-name>
@@ -1330,7 +1312,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>5</approx-count>
               <contains-null>true</contains-null>
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>gross_revenue</remote-name>
@@ -1345,7 +1326,6 @@
               <approx-count>612</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>discount_value</remote-name>
@@ -1360,7 +1340,6 @@
               <approx-count>48</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>net_revenue</remote-name>
@@ -1375,7 +1354,6 @@
               <approx-count>597</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>cost</remote-name>
@@ -1390,7 +1368,6 @@
               <approx-count>452</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>profit</remote-name>
@@ -1405,7 +1382,6 @@
               <approx-count>983</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LPT_RBR' />
-              <object-id>[tabela_completa_boticario_clean3.csv_FD0FE54957CD4E2390B65DD4143F83BC]</object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -1565,6 +1541,7 @@
         <field-sort-custom-order field='month_name' />
         <field-sort-custom-order field='quarter' />
         <field-sort-custom-order field='season' />
+        <field-sort-custom-order field='Calculation_0400539071295489' />
         <field-sort-custom-order field='is_weekend' />
         <field-sort-custom-order field='product_name' />
         <field-sort-custom-order field='Calculation_0580854505336842' />
@@ -1616,6 +1593,7 @@
         <field-sort-custom-order field='Calculation_0353531445088259' />
         <field-sort-custom-order field='Calculation_0353531444248576' />
         <field-sort-custom-order field='Calculation_0365626846642182' />
+        <field-sort-custom-order field='Calculation_0400539071041536' />
         <field-sort-custom-order field='Calculation_0414827874312198' />
         <field-sort-custom-order field='Calculation_0580854519242773' />
         <field-sort-custom-order field='Calculation_0580854499696646' />
@@ -2437,7 +2415,7 @@
             </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]'>
-            <groupfilter function='member' level='[channel_name]' member='&quot;Loja FÃ­sica&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[channel_name]' member='&quot;E-commerce&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Loyalty Flag clean,Season)]'>
             <groupfilter function='crossjoin' user:ui-action-filter='[Action16_1838212BD0CF4FD09B328C0C5EADBF55]' user:ui-enumeration='all' user:ui-marker='enumerate'>
@@ -3787,6 +3765,9 @@
             <column caption='E-commerce - Loja Física' datatype='boolean' name='[Calculation_0093498032476160]' role='dimension' type='nominal'>
               <calculation class='tableau' formula='TRIM([channel_name]) = [Parameters].[Parâmetro 4]' />
             </column>
+            <column caption='Receita media diaria(impacto campanha)' datatype='real' default-format='c&quot;R$ &quot;#,##0.00;-&quot;R$ &quot;#,##0.00' name='[Calculation_0400539071295489]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_0414827874791431])&#13;&#10;/&#13;&#10;SUM({ FIXED [season] : COUNTD(DATETRUNC(&apos;day&apos;,[sale_date])) })' />
+            </column>
             <column caption='receita líquida' datatype='real' name='[Calculation_0414827860504576]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='FLOAT(TRIM([net_revenue]))' />
             </column>
@@ -3795,9 +3776,6 @@
             </column>
             <column caption='Loyalty Flag clean' datatype='string' name='[Calculation_0643526920151043]' role='dimension' type='nominal'>
               <calculation class='tableau' formula='IF ISNULL([loyalty_flag]) THEN &quot;Não identificado&quot;&#13;&#10;ELSEIF [loyalty_flag] = TRUE THEN &quot;Fidelizado&quot;&#13;&#10;ELSE &quot;Não fidelizado&quot;&#13;&#10;END' />
-            </column>
-            <column caption='Receita media por dia' datatype='real' default-format='c&quot;R$ &quot;#,##0.00;-&quot;R$ &quot;#,##0.00' name='[Calculation_0643526926651397]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([Calculation_0414827874791431]) / COUNTD([sale_date])' />
             </column>
             <column caption='Channel Name' datatype='string' name='[channel_name]' role='dimension' type='nominal'>
               <aliases>
@@ -3815,10 +3793,10 @@
                 <alias key='&quot;Dia das MÃ£es&quot;' value='Dia das Mães' />
               </aliases>
             </column>
-            <column-instance column='[Calculation_0643526926651397]' derivation='User' name='[usr:Calculation_0643526926651397:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0400539071295489]' derivation='User' name='[usr:Calculation_0400539071295489:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]'>
-            <groupfilter function='member' level='[channel_name]' member='&quot;Loja FÃ­sica&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[channel_name]' member='&quot;E-commerce&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Season)]'>
             <groupfilter function='level-members' level='[season]' user:ui-action-filter='[Action18_E2615CAF6CC9436F83DFC0F178140DC5]' user:ui-enumeration='all' user:ui-marker='enumerate' />
@@ -3826,9 +3804,17 @@
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:Calculation_0093498032476160:nk]'>
             <groupfilter function='level-members' level='[none:Calculation_0093498032476160:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
-          <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' shelf='rows' />
-          </shelf-sorts>
+          <manual-sort column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Black Friday&quot;</bucket>
+              <bucket>&quot;Natal&quot;</bucket>
+              <bucket>&quot;Dia das MÃ£es&quot;</bucket>
+              <bucket>&quot;Regular&quot;</bucket>
+              <bucket>&quot;Dia dos Namorados&quot;</bucket>
+              <bucket>&quot;Dia da Mulher&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
           <slices>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]</column>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:Calculation_0093498032476160:nk]</column>
@@ -3838,7 +3824,7 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='display' class='0' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' scope='cols' value='false' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='height' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]' value='22' />
@@ -3856,7 +3842,7 @@
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
               <color column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:Calculation_0643526920151043:nk]' />
-              <text column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' />
+              <text column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' />
             </encodings>
             <style>
               <style-rule element='datalabel'>
@@ -3864,9 +3850,9 @@
                 <format attr='font-size' value='8' />
               </style-rule>
               <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='false' />
-                <format attr='size' value='1.824088454246521' />
+                <format attr='size' value='1.5492265224456787' />
+                <format attr='mark-labels-show' value='true' />
               </style-rule>
               <style-rule element='pane'>
                 <format attr='minheight' value='-1' />
@@ -3876,7 +3862,7 @@
           </pane>
         </panes>
         <rows>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]</rows>
-        <cols>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]</cols>
+        <cols>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]</cols>
       </table>
       <simple-id uuid='{892E794E-E8AF-42FA-A15B-FA8ECA627A29}' />
     </worksheet>
@@ -4263,6 +4249,9 @@
             <datasource caption='tabela completa boticario' name='federated.09ym29r11xm6rt14hsv0t0h3ouq1' />
           </datasources>
           <datasource-dependencies datasource='federated.09ym29r11xm6rt14hsv0t0h3ouq1'>
+            <column caption='Receita media diaria(impacto campanha)' datatype='real' default-format='c&quot;R$ &quot;#,##0.00;-&quot;R$ &quot;#,##0.00' name='[Calculation_0400539071295489]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_0414827874791431])&#13;&#10;/&#13;&#10;SUM({ FIXED [season] : COUNTD(DATETRUNC(&apos;day&apos;,[sale_date])) })' />
+            </column>
             <column caption='receita líquida' datatype='real' name='[Calculation_0414827860504576]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='FLOAT(TRIM([net_revenue]))' />
             </column>
@@ -4271,9 +4260,6 @@
             </column>
             <column caption='Loyalty Flag clean' datatype='string' name='[Calculation_0643526920151043]' role='dimension' type='nominal'>
               <calculation class='tableau' formula='IF ISNULL([loyalty_flag]) THEN &quot;Não identificado&quot;&#13;&#10;ELSEIF [loyalty_flag] = TRUE THEN &quot;Fidelizado&quot;&#13;&#10;ELSE &quot;Não fidelizado&quot;&#13;&#10;END' />
-            </column>
-            <column caption='Receita media por dia' datatype='real' default-format='c&quot;R$ &quot;#,##0.00;-&quot;R$ &quot;#,##0.00' name='[Calculation_0643526926651397]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='SUM([Calculation_0414827874791431]) / COUNTD([sale_date])' />
             </column>
             <column caption='Channel Name' datatype='string' name='[channel_name]' role='dimension' type='nominal'>
               <aliases>
@@ -4289,10 +4275,10 @@
                 <alias key='&quot;Dia das MÃ£es&quot;' value='Dia das Mães' />
               </aliases>
             </column>
-            <column-instance column='[Calculation_0643526926651397]' derivation='User' name='[usr:Calculation_0643526926651397:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0400539071295489]' derivation='User' name='[usr:Calculation_0400539071295489:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]'>
-            <groupfilter function='member' level='[channel_name]' member='&quot;Loja FÃ­sica&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[channel_name]' member='&quot;E-commerce&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Loyalty Flag clean,Season)]'>
             <groupfilter function='crossjoin' user:ui-action-filter='[Action16_1838212BD0CF4FD09B328C0C5EADBF55]' user:ui-enumeration='all' user:ui-marker='enumerate'>
@@ -4300,21 +4286,25 @@
               <groupfilter function='level-members' level='[season]' />
             </groupfilter>
           </filter>
+          <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]'>
+            <groupfilter function='level-members' level='[none:season:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
           <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' shelf='rows' />
+            <shelf-sort-v2 dimension-to-sort='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' shelf='rows' />
           </shelf-sorts>
           <slices>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]</column>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Loyalty Flag clean,Season)]</column>
+            <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='axis'>
-            <format attr='display' class='0' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' scope='cols' value='false' />
           </style-rule>
           <style-rule element='mark'>
-            <encoding attr='color' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' palette='green_gold_10_0' type='interpolated' />
+            <encoding attr='color' field='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' palette='green_gold_10_0' type='interpolated' />
           </style-rule>
         </style>
         <panes>
@@ -4325,8 +4315,8 @@
             <mark class='Automatic' />
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
-              <color column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' />
-              <text column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' />
+              <color column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' />
+              <text column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' />
             </encodings>
             <style>
               <style-rule element='datalabel'>
@@ -4334,15 +4324,15 @@
                 <format attr='font-size' value='8' />
               </style-rule>
               <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='false' />
                 <format attr='size' value='1.0984530448913574' />
+                <format attr='mark-labels-show' value='true' />
               </style-rule>
             </style>
           </pane>
         </panes>
         <rows>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:season:nk]</rows>
-        <cols>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]</cols>
+        <cols>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]</cols>
       </table>
       <simple-id uuid='{18AD0719-8D66-424A-94AA-9F54922F75BA}' />
     </worksheet>
@@ -4416,7 +4406,7 @@
             <column-instance column='[Calculation_0643526926651397]' derivation='User' name='[usr:Calculation_0643526926651397:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Channel Name)]'>
-            <groupfilter function='member' level='[channel_name]' member='&quot;Loja FÃ­sica&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[channel_name]' member='&quot;E-commerce&quot;' user:ui-action-filter='[Action2_6247DAC9034E43AF9B638755D1C8C3DD]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (Loyalty Flag clean,Season)]'>
             <groupfilter function='crossjoin' user:ui-action-filter='[Action16_1838212BD0CF4FD09B328C0C5EADBF55]' user:ui-enumeration='all' user:ui-marker='enumerate'>
@@ -4559,8 +4549,8 @@
                 </zone-style>
               </zone>
               <zone h='27500' id='71' param='horz' type-v2='layout-flow' w='98666' x='667' y='47500'>
-                <zone h='25000' id='72' name='Curva ABC(pareto)' w='49958' x='667' y='48750'>
-                  <layout-cache minwidth='195' type-h='fixed' type-w='scalable' />
+                <zone h='25000' id='72' name='Curva ABC(pareto)' w='49916' x='667' y='48750'>
+                  <layout-cache minwidth='194' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4568,7 +4558,7 @@
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='25000' id='75' name='% receita por classe' w='48708' x='50625' y='48750'>
+                <zone h='25000' id='75' name='% receita por classe' w='48749' x='50583' y='48750'>
                   <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4595,9 +4585,9 @@
                 </zone-style>
               </zone>
               <zone h='15125' id='129' param='horz' type-v2='layout-flow' w='98666' x='667' y='32375'>
-                <zone forceUpdate='true' h='15125' id='130' type-v2='text' w='48666' x='667' y='32375'>
+                <zone forceUpdate='true' h='15125' id='130' type-v2='text' w='48499' x='667' y='32375'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Dominância de Skincare: Com 36,82% da receita, a categoria de Skincare lidera o portfólio, seguida de perto por Maquiagem (34,09%). Como Skincare geralmente possui maior fidelização e recorrência, o time de marketing deve focar em campanhas de reposição automática para esses itens.</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Em 2025 a dominância de Skincare: Com 44,30% da receita, a categoria de Skincare lidera o portfólio, Como Skincare geralmente possui maior recorrência, o time de marketing deve focar em campanhas de reposição automática para esses itens.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4607,9 +4597,9 @@
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='15125' id='131' type-v2='text' w='49999' x='49333' y='32375'>
+                <zone forceUpdate='true' h='15125' id='131' type-v2='text' w='50166' x='49166' y='32375'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Eficiência de Mix: A concentração de receita na Classe C (42,3%) indica que o volume de vendas está em produtos de entrada ou promocionais. Para elevar o ticket médio de R$ 951, é necessário impulsionar produtos da Classe A, possivelmente através de kits de perfumaria fina.</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Eficiência de Mix: A concentração de receita na Classe C em 2025 (36,9%) indica que o volume de vendas está em produtos de entrada ou promocionais. Para elevar o ticket médio de R$ 894, é necessário impulsionar produtos da Classe A, possivelmente através de kits de perfumaria fina.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4658,8 +4648,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1450' minheight='1450' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='141' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='140' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+            <zone h='100000' id='155' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='154' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
                 <zone forceUpdate='true' h='6625' id='31' type-v2='text' w='83666' x='667' y='1000'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Análise Estratégica do Portfólio de Produtos</run>
@@ -4703,9 +4693,9 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='15125' id='130' type-v2='text' w='48666' x='667' y='32375'>
+                <zone forceUpdate='true' h='15125' id='130' type-v2='text' w='48499' x='667' y='32375'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Dominância de Skincare: Com 36,82% da receita, a categoria de Skincare lidera o portfólio, seguida de perto por Maquiagem (34,09%). Como Skincare geralmente possui maior fidelização e recorrência, o time de marketing deve focar em campanhas de reposição automática para esses itens.</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Em 2025 a dominância de Skincare: Com 44,30% da receita, a categoria de Skincare lidera o portfólio, Como Skincare geralmente possui maior recorrência, o time de marketing deve focar em campanhas de reposição automática para esses itens.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4716,9 +4706,9 @@
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='15125' id='131' type-v2='text' w='49999' x='49333' y='32375'>
+                <zone forceUpdate='true' h='15125' id='131' type-v2='text' w='50166' x='49166' y='32375'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Eficiência de Mix: A concentração de receita na Classe C (42,3%) indica que o volume de vendas está em produtos de entrada ou promocionais. Para elevar o ticket médio de R$ 951, é necessário impulsionar produtos da Classe A, possivelmente através de kits de perfumaria fina.</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Eficiência de Mix: A concentração de receita na Classe C em 2025 (36,9%) indica que o volume de vendas está em produtos de entrada ou promocionais. Para elevar o ticket médio de R$ 894, é necessário impulsionar produtos da Classe A, possivelmente através de kits de perfumaria fina.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4729,8 +4719,8 @@
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='207' h='25000' id='72' is-fixed='true' name='Curva ABC(pareto)' w='49958' x='667' y='48750'>
-                  <layout-cache minwidth='195' type-h='fixed' type-w='scalable' />
+                <zone fixed-size='207' h='25000' id='72' is-fixed='true' name='Curva ABC(pareto)' w='49916' x='667' y='48750'>
+                  <layout-cache minwidth='194' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4739,7 +4729,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='207' h='25000' id='75' is-fixed='true' name='% receita por classe' w='48708' x='50625' y='48750'>
+                <zone fixed-size='207' h='25000' id='75' is-fixed='true' name='% receita por classe' w='48749' x='50583' y='48750'>
                   <layout-cache minwidth='180' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4875,8 +4865,8 @@ KPIS e Portfólio de produtos</run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='24' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98400' id='23' param='vert' type-v2='layout-flow' w='98400' x='800' y='800'>
+            <zone h='100000' id='38' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='37' param='vert' type-v2='layout-flow' w='98400' x='800' y='800'>
                 <zone fixed-size='280' h='98400' id='3' is-centered='0' is-fixed='true' param='Image/Gemini_Generated_Image_k69zmmk69zmmk69z.png' type-v2='bitmap' w='98400' x='800' y='800'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5092,8 +5082,8 @@ KPIS e Portfólio de produtos</run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='111' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='110' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+            <zone h='100000' id='125' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='124' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
                 <zone forceUpdate='true' h='6875' id='5' type-v2='text' w='98666' x='667' y='1000'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Comparação de Performance por Estado e Canal</run>
@@ -5466,8 +5456,8 @@ KPIS e Portfólio de produtos</run>
           </layout-options>
           <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='193' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='192' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+            <zone h='100000' id='207' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='206' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
                 <zone h='6874' id='143' type-v2='text' w='83999' x='667' y='1000'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='20'>Visão Geral de Performance</run>
@@ -5634,10 +5624,10 @@ KPIS e Portfólio de produtos</run>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='98000' id='85' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
             <zone h='98000' id='63' type-v2='layout-basic' w='98666' x='667' y='1000'>
-              <zone h='31125' id='60' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
-                <zone h='31125' id='51' type-v2='layout-basic' w='98666' x='667' y='1000'>
-                  <zone h='20495' id='32' param='vert' type-v2='layout-flow' w='98666' x='667' y='11630'>
-                    <zone fixed-size='131' h='15245' id='33' is-fixed='true' name='KPI campanhas' show-title='false' w='94334' x='2833' y='13630'>
+              <zone h='30625' id='60' param='horz' type-v2='layout-flow' w='98666' x='667' y='1000'>
+                <zone h='30625' id='51' type-v2='layout-basic' w='98666' x='667' y='1000'>
+                  <zone h='20375' id='32' param='vert' type-v2='layout-flow' w='98666' x='667' y='11250'>
+                    <zone fixed-size='131' h='15125' id='33' is-fixed='true' name='KPI campanhas' show-title='false' w='94334' x='2833' y='13250'>
                       <layout-cache fixed-size-w='1116' type-h='fixed' type-w='fixed' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
@@ -5658,7 +5648,7 @@ KPIS e Portfólio de produtos</run>
                       <format attr='background-color' value='#a8a8a889' />
                     </zone-style>
                   </zone>
-                  <zone forceUpdate='true' h='5063' id='41' type-v2='text' w='98666' x='667' y='1625'>
+                  <zone forceUpdate='true' h='4977' id='41' type-v2='text' w='98666' x='667' y='1625'>
                     <formatted-text>
                       <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Performance de Campanhas e Fidelização de Clientes</run>
                     </formatted-text>
@@ -5669,8 +5659,8 @@ KPIS e Portfólio de produtos</run>
                       <format attr='margin' value='0' />
                     </zone-style>
                   </zone>
-                  <zone h='4942' id='94' param='horz' type-v2='layout-flow' w='26166' x='73167' y='6688'>
-                    <zone h='4125' id='96' name='botoes canal2' show-title='false' w='26166' x='73167' y='6688'>
+                  <zone h='4648' id='94' param='horz' type-v2='layout-flow' w='26166' x='73167' y='6602'>
+                    <zone h='4125' id='96' name='botoes canal2' show-title='false' w='26166' x='73167' y='6602'>
                       <layout-cache fixed-size-h='25' fixed-size-w='304' type-h='fixed' type-w='fixed' />
                       <zone-style>
                         <format attr='border-color' value='#000000' />
@@ -5680,7 +5670,7 @@ KPIS e Portfólio de produtos</run>
                       </zone-style>
                     </zone>
                   </zone>
-                  <zone h='4942' id='95' type-v2='text' w='72500' x='667' y='6688'>
+                  <zone h='4648' id='95' type-v2='text' w='72500' x='667' y='6602'>
                     <formatted-text>
                       <run fontname='Segoe UI'>Avaliação do impacto das campanhas sazonais</run>
                     </formatted-text>
@@ -5699,8 +5689,8 @@ KPIS e Portfólio de produtos</run>
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='28625' id='61' param='horz' type-v2='layout-flow' w='98666' x='667' y='70375'>
-                <zone h='28625' id='62' name='campanhas e fidelização' w='50541' x='667' y='70375'>
+              <zone h='28500' id='61' param='horz' type-v2='layout-flow' w='98666' x='667' y='70500'>
+                <zone h='28500' id='62' name='campanhas e fidelização' w='50541' x='667' y='70500'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5709,7 +5699,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='margin' value='4' />
                   </zone-style>
                 </zone>
-                <zone h='28625' id='67' name='scateer' w='48124' x='51208' y='70375'>
+                <zone h='28500' id='67' name='scateer' w='48124' x='51208' y='70500'>
                   <layout-cache minwidth='231' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5719,8 +5709,8 @@ KPIS e Portfólio de produtos</run>
                   </zone-style>
                 </zone>
               </zone>
-              <zone h='25875' id='72' param='horz' type-v2='layout-flow' w='98666' x='667' y='44500'>
-                <zone h='25875' id='73' name='receitax dia, campanha e canal' w='98666' x='667' y='44500'>
+              <zone h='26250' id='72' param='horz' type-v2='layout-flow' w='98666' x='667' y='44250'>
+                <zone h='26250' id='73' name='receitax dia, campanha e canal' w='98666' x='667' y='44250'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5738,11 +5728,13 @@ KPIS e Portfólio de produtos</run>
                   <format attr='background-color' value='#a8a8a87c' />
                 </zone-style>
               </zone>
-              <zone h='12375' id='126' param='horz' type-v2='layout-flow' w='98666' x='667' y='32125'>
-                <zone h='12375' id='127' param='horz' type-v2='layout-flow' w='98666' x='667' y='32125'>
-                  <zone h='12375' id='129' type-v2='text' w='49166' x='667' y='32125'>
+              <zone h='12625' id='126' param='horz' type-v2='layout-flow' w='98666' x='667' y='31625'>
+                <zone h='12625' id='127' param='horz' type-v2='layout-flow' w='98666' x='667' y='31625'>
+                  <zone forceUpdate='true' h='12625' id='129' type-v2='text' w='48833' x='667' y='31625'>
                     <formatted-text>
-                      <run bold='true' fontalignment='1' fontcolor='#1f1f1f' fontname='Segoe UI' fontsize='8'>Vencedores Sazonais: O Dia das Mães lidera em receita média diária (R$ 595,34), consolidando-se como a principal alavanca de vendas, superando inclusive o Natal e a Black Friday. Isso valida a força do portfólio de presentes da marca.</run>
+                      <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Dia das Mães lidera no E-commerce (R$ 408,57), demonstrando maior geração de ticket no canal digital.</run>
+                      <run fontalignment='1'>Æ&#10;</run>
+                      <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Já a Black Friday apresenta melhor desempenho na Loja Física (R$ 493,76), indicando maior captura de valor no ambiente presencial.</run>
                     </formatted-text>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
@@ -5752,9 +5744,12 @@ KPIS e Portfólio de produtos</run>
                       <format attr='background-color' value='#a8a8a8' />
                     </zone-style>
                   </zone>
-                  <zone forceUpdate='true' h='12375' id='128' type-v2='text' w='49499' x='49833' y='32125'>
+                  <zone forceUpdate='true' h='12625' id='128' type-v2='text' w='49833' x='49500' y='31625'>
                     <formatted-text>
-                      <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>O grupo &quot;Não Identificado&quot; lidera o ticket médio no Dia dos Namorados (R$ 608,36), indicando um perfil de &quot;presenteador de oportunidade&quot;.Oportunidade: Implementar fluxo de boas-vindas pós-campanha para conversão e fidelização desse público.</run>
+                      <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>No E-commerce, a Black Friday registra R$ 285,74, ficando 42% abaixo do físico.</run>
+                      <run fontalignment='1'>Æ&#10;</run>
+                      <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>O gap de R$ 208,02 evidencia diferença relevante de comportamento entre canais e potencial de otimização no digital</run>
+                      <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>.</run>
                     </formatted-text>
                     <zone-style>
                       <format attr='border-color' value='#000000' />
@@ -5792,9 +5787,9 @@ KPIS e Portfólio de produtos</run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1300' minheight='1300' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='139' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='138' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
-                <zone forceUpdate='true' h='5063' id='41' type-v2='text' w='98666' x='667' y='1625'>
+            <zone h='100000' id='153' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='152' param='vert' type-v2='layout-flow' w='98666' x='667' y='1000'>
+                <zone forceUpdate='true' h='4977' id='41' type-v2='text' w='98666' x='667' y='1625'>
                   <formatted-text>
                     <run fontcolor='#000000' fontname='Segoe UI Black' fontsize='22'>Performance de Campanhas e Fidelização de Clientes</run>
                   </formatted-text>
@@ -5806,7 +5801,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='4942' id='95' type-v2='text' w='72500' x='667' y='6688'>
+                <zone h='4648' id='95' type-v2='text' w='72500' x='667' y='6602'>
                   <formatted-text>
                     <run fontname='Segoe UI'>Avaliação do impacto das campanhas sazonais</run>
                   </formatted-text>
@@ -5818,7 +5813,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='27' h='4125' id='96' is-fixed='true' name='botoes canal2' show-title='false' w='26166' x='73167' y='6688'>
+                <zone fixed-size='27' h='4125' id='96' is-fixed='true' name='botoes canal2' show-title='false' w='26166' x='73167' y='6602'>
                   <layout-cache fixed-size-h='25' fixed-size-w='304' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5828,7 +5823,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='131' h='15245' id='33' is-fixed='true' name='KPI campanhas' show-title='false' w='94334' x='2833' y='13630'>
+                <zone fixed-size='130' h='15125' id='33' is-fixed='true' name='KPI campanhas' show-title='false' w='94334' x='2833' y='13250'>
                   <layout-cache fixed-size-w='1116' type-h='fixed' type-w='fixed' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5838,9 +5833,11 @@ KPIS e Portfólio de produtos</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='12375' id='129' type-v2='text' w='49166' x='667' y='32125'>
+                <zone forceUpdate='true' h='12625' id='129' type-v2='text' w='48833' x='667' y='31625'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#1f1f1f' fontname='Segoe UI' fontsize='8'>Vencedores Sazonais: O Dia das Mães lidera em receita média diária (R$ 595,34), consolidando-se como a principal alavanca de vendas, superando inclusive o Natal e a Black Friday. Isso valida a força do portfólio de presentes da marca.</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Dia das Mães lidera no E-commerce (R$ 408,57), demonstrando maior geração de ticket no canal digital.</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>Já a Black Friday apresenta melhor desempenho na Loja Física (R$ 493,76), indicando maior captura de valor no ambiente presencial.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5851,9 +5848,12 @@ KPIS e Portfólio de produtos</run>
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone forceUpdate='true' h='12375' id='128' type-v2='text' w='49499' x='49833' y='32125'>
+                <zone forceUpdate='true' h='12625' id='128' type-v2='text' w='49833' x='49500' y='31625'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>O grupo &quot;Não Identificado&quot; lidera o ticket médio no Dia dos Namorados (R$ 608,36), indicando um perfil de &quot;presenteador de oportunidade&quot;.Oportunidade: Implementar fluxo de boas-vindas pós-campanha para conversão e fidelização desse público.</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>No E-commerce, a Black Friday registra R$ 285,74, ficando 42% abaixo do físico.</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Segoe UI' fontsize='8'>O gap de R$ 208,02 evidencia diferença relevante de comportamento entre canais e potencial de otimização no digital</run>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5864,7 +5864,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='background-color' value='#a8a8a8' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='202' h='25875' id='73' is-fixed='true' name='receitax dia, campanha e canal' w='98666' x='667' y='44500'>
+                <zone fixed-size='205' h='26250' id='73' is-fixed='true' name='receitax dia, campanha e canal' w='98666' x='667' y='44250'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5874,7 +5874,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='238' h='28625' id='62' is-fixed='true' name='campanhas e fidelização' w='50541' x='667' y='70375'>
+                <zone fixed-size='237' h='28500' id='62' is-fixed='true' name='campanhas e fidelização' w='50541' x='667' y='70500'>
                   <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5893,7 +5893,7 @@ KPIS e Portfólio de produtos</run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='238' h='28625' id='67' is-fixed='true' name='scateer' w='48124' x='51208' y='70375'>
+                <zone fixed-size='237' h='28500' id='67' is-fixed='true' name='scateer' w='48124' x='51208' y='70500'>
                   <layout-cache minwidth='231' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -5935,10 +5935,10 @@ KPIS e Portfólio de produtos</run>
       <simple-id uuid='{15802C88-9F02-474B-8746-685862D8A84B}' />
     </dashboard>
   </dashboards>
-  <windows pres-mode='true' saved-dpi-scale-factor='1.5' show-side-pane='false' source-height='44'>
-    <window class='dashboard' maximized='true' name='Capa'>
+  <windows show-side-pane='false' source-height='44'>
+    <window class='dashboard' name='Capa'>
       <viewpoints />
-      <active id='6' />
+      <active id='-1' />
       <simple-id uuid='{3B8AA42E-B6C1-4E81-BCAE-F53CC4CFB1FE}' />
     </window>
     <window class='dashboard' name='Visão Geral de Performance'>
@@ -5968,7 +5968,7 @@ KPIS e Portfólio de produtos</run>
         </viewpoint>
         <viewpoint name='Receita por Estado — Comparação entre E-commerce e Loja Física' />
       </viewpoints>
-      <active id='88' />
+      <active id='-1' />
       <simple-id uuid='{331B147B-F6A1-4C50-923A-0CBBB8A72DC7}' />
     </window>
     <window class='dashboard' name='Analise de performance de produtos'>
@@ -5984,10 +5984,10 @@ KPIS e Portfólio de produtos</run>
         <viewpoint name='botoes ano' />
         <viewpoint name='receita x subcategoria' />
       </viewpoints>
-      <active id='120' />
+      <active id='131' />
       <simple-id uuid='{4D5336E0-C565-4FFF-9630-93ED124CD795}' />
     </window>
-    <window class='dashboard' name='campanhas'>
+    <window class='dashboard' maximized='true' name='campanhas'>
       <viewpoints>
         <viewpoint name='KPI campanhas' />
         <viewpoint name='botoes canal2' />
@@ -5997,7 +5997,7 @@ KPIS e Portfólio de produtos</run>
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='117' />
+      <active id='-1' />
       <simple-id uuid='{661DED02-2EDF-414F-B16B-6FBC59F9A0AA}' />
     </window>
     <window class='worksheet' hidden='true' name='% receita por classe'>
@@ -6362,6 +6362,9 @@ KPIS e Portfólio de produtos</run>
           </strip>
         </edge>
       </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
       <simple-id uuid='{D2A248A5-0058-445B-ADED-CA7C1E6618EF}' />
     </window>
     <window class='worksheet' hidden='true' name='evolução financeira'>
@@ -6471,7 +6474,7 @@ KPIS e Portfólio de produtos</run>
         </edge>
         <edge name='right'>
           <strip size='170'>
-            <card pane-specification-id='0' param='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0643526926651397:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0400539071295489:qk]' type='color' />
           </strip>
         </edge>
       </cards>

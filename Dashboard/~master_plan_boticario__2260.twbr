@@ -966,7 +966,7 @@
         <drill-path name='state, city' />
       </drill-paths>
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
-        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='Data/TableauTemp/#TableauTemp_0iz5lfc0pu0kd41gjfced15xuwk3.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/19/2026 03:22:41 AM' username='tableau_internal_user'>
+        <connection access_mode='readonly' author-locale='pt_BR' class='hyper' dbname='Data/TableauTemp/#TableauTemp_02636zp0xd2ptd0zkdg3t1eb7tld.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='02/19/2026 02:31:55 AM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
           <metadata-records>
             <metadata-record class='column'>
@@ -2254,7 +2254,7 @@
             <groupfilter function='level-members' level='[month_name]' user:ui-action-filter='[Action8_DC4347C07038428B8E73F5073FEFD377]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[:Measure Names]</column>
@@ -3255,7 +3255,7 @@
             <groupfilter function='level-members' level='[month_name]' user:ui-action-filter='[Action8_DC4347C07038428B8E73F5073FEFD377]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <computed-sort column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:channel_name:nk]' direction='DESC' using='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[usr:Calculation_0414827875143689:qk]' />
           <slices>
@@ -3943,7 +3943,7 @@
             <groupfilter function='level-members' level='[Calculation_0643526920151043]' user:ui-action-filter='[Action6_FF846C1886B74C7A951D6814E0A61970]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]</column>
@@ -4080,7 +4080,7 @@
             <groupfilter function='level-members' level='[month_name]' user:ui-action-filter='[Action8_DC4347C07038428B8E73F5073FEFD377]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[Action (YEAR(Sale Date))]'>
-            <groupfilter function='member' level='[yr:sale_date:ok]' member='2024' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[yr:sale_date:ok]' member='2025' user:ui-action-filter='[Action4_C70AF6AC176D44AC9213E55232C98D23]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <shelf-sorts>
             <shelf-sort-v2 dimension-to-sort='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[none:Calculation_0643526920151043:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.09ym29r11xm6rt14hsv0t0h3ouq1].[sum:Calculation_0414827874791431:qk]' shelf='rows' />
@@ -5935,13 +5935,13 @@ KPIS e Portfólio de produtos</run>
       <simple-id uuid='{15802C88-9F02-474B-8746-685862D8A84B}' />
     </dashboard>
   </dashboards>
-  <windows pres-mode='true' saved-dpi-scale-factor='1.5' show-side-pane='false' source-height='44'>
-    <window class='dashboard' maximized='true' name='Capa'>
+  <windows show-side-pane='false' source-height='44'>
+    <window class='dashboard' name='Capa'>
       <viewpoints />
       <active id='6' />
       <simple-id uuid='{3B8AA42E-B6C1-4E81-BCAE-F53CC4CFB1FE}' />
     </window>
-    <window class='dashboard' name='Visão Geral de Performance'>
+    <window class='dashboard' maximized='true' name='Visão Geral de Performance'>
       <viewpoints>
         <viewpoint name='KPI' />
         <viewpoint name='Receita por canal'>
@@ -5955,7 +5955,7 @@ KPIS e Portfólio de produtos</run>
         </viewpoint>
         <viewpoint name='receita por cliente' />
       </viewpoints>
-      <active id='172' />
+      <active id='144' />
       <simple-id uuid='{7701EC10-10CE-44F2-9A6C-10AB154562EF}' />
     </window>
     <window class='dashboard' name='Comparação por Estado e Canal'>
