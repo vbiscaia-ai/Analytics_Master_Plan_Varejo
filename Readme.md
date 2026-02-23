@@ -1,13 +1,13 @@
 
 
 
-📊 Análise Comercial, CRM e Impacto de Campanhas Sazonais
+## 📊 Análise Comercial, CRM e Impacto de Campanhas Sazonais
 
 Projeto de Data Analytics com foco em performance comercial, comportamento de consumo e impacto de campanhas sazonais, integrando análise de ticket médio, categorias estratégicas e oportunidades de CRM.
 
 O objetivo central foi transformar dados transacionais em direcionamento estratégico acionável para Marketing, CRM e Planejamento Comercial.
 
-🎯 Objetivo do Projeto
+## 🎯 Objetivo do Projeto
 
 Identificar padrões de compra e oportunidades estratégicas para:
 
@@ -28,7 +28,7 @@ Explore os principais KPIs de Performance, CRM e Portfólio no dashboard interat
 
 🔗 **[Acesse o Dashboard Interativo no Tableau Public](https://public.tableau.com/views/VisoGeraldePerformance/Capa?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
 
-🏗️ Arquitetura de Dados
+## 🏗️ Arquitetura de Dados
 
 O pipeline foi estruturado seguindo o conceito de Multi-hop Architecture (RAW → TRUSTED → GOLD), garantindo rastreabilidade, governança e confiabilidade analítica.
 
@@ -67,7 +67,7 @@ Reprodutibilidade
 
 Performance analítica
 
-🛠️ Engenharia de Dados com SQL
+## 🛠️ Engenharia de Dados com SQL
 
 A camada analítica foi construída com foco em:
 
@@ -83,7 +83,7 @@ Segmentação de clientes
 
 Análise de CRM e fidelização
 
-🧩 Metodologia Analítica
+## 🧩 Metodologia Analítica
 
 O projeto foi estruturado em quatro frentes:
 
@@ -101,7 +101,7 @@ Análise por canal, sazonalidade e fidelização.
 
 4️⃣ Geração de Insights Estratégicos
 
-Transformação de dados em recomendações acionáveis.
+## Transformação de dados em recomendações acionáveis.
 
 📊 Performance Sazonal — Impacto por Canal
 🛍️ E-commerce
@@ -126,7 +126,7 @@ R$ 208,02 superior ao E-commerce
 
 O E-commerce performa 42,1% abaixo da loja física
 
-🎯 Interpretação Estratégica
+## 🎯 Interpretação Estratégica
 
 Existe um desalinhamento entre estímulo promocional e captura de valor no canal digital.
 
@@ -140,7 +140,7 @@ Menor aproveitamento de bundles
 
 Isso representa uma oportunidade clara de otimização estratégica.
 
-📲 Estratégia Recomendada — Mensageria para Aumentar Ticket Médio no E-commerce
+## 📲 Estratégia Recomendada — Mensageria para Aumentar Ticket Médio no E-commerce
 
 Dado o gap de 42% entre canais, recomenda-se ativação de mensageria personalizada pré e durante a Black Friday:
 
@@ -178,7 +178,7 @@ Melhorar margem via bundles
 
 Reduzir dependência do canal físico
 
-👥 Análise da Base de Clientes
+## 👥 Análise da Base de Clientes
 
 Clientes não fidelizados representam 34,9% da base ativa.
 
@@ -192,7 +192,7 @@ Redução da dependência de aquisição paga
 
 Espaço para campanhas de reengajamento
 
-🎁 Conceito Estratégico: Gift-Giving
+## 🎁 Conceito Estratégico: Gift-Giving
 
 Datas como Dia das Mães e Natal seguem padrão de compra emocional:
 
@@ -204,7 +204,7 @@ Busca por kits e embalagens especiais
 
 Compra orientada a presente
 
-💄 Performance por Categoria — Skincare
+## 💄 Performance por Categoria — Skincare
 
 Em 2025:
 
@@ -220,7 +220,7 @@ Indício de elasticidade controlada
 
 Potencial de cross-sell e recorrência
 
-🔍 Aprendizado Técnico — Controle de Granularidade na Métrica
+## 🔍 Aprendizado Técnico — Controle de Granularidade na Métrica
 
 Durante a construção do dashboard, identifiquei uma inconsistência na métrica de Receita Média Diária por Campanha.
 
@@ -250,7 +250,7 @@ Garantindo comparabilidade real entre segmentos
 
 Esse ajuste reforçou a importância do controle de granularidade na modelagem de KPIs estratégicos.
 
-🛠️ Stack Utilizada
+## 🛠️ Stack Utilizada
 
 Python (ETL e tratamento de dados)
 
@@ -260,7 +260,7 @@ Tableau (Visualização e Storytelling)
 
 Arquitetura Multi-hop (RAW → TRUSTED → GOLD)
 
-🚀 Conclusão
+## 🚀 Conclusão
 
 O projeto demonstra como dados transacionais podem ser transformados em direcionamento estratégico real para:
 
