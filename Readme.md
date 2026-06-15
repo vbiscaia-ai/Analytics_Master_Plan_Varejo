@@ -11,7 +11,7 @@ O objetivo central foi transformar dados transacionais em direcionamento estrat�
 
 Identificar padrões de compra e oportunidades estratégicas para:
 
-Aumentar Ticket Médio
+Aumentar Ticket Medio
 
 Melhorar conversão em datas sazonais
 
