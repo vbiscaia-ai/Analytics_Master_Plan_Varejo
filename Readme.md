@@ -118,7 +118,7 @@ Black Friday — R$ 493,76 (maior média diária entre campanhas)
 
 🔎 Gap Estratégico Black Friday
 
-A média diária da Loja Física na Black Friday (R$ 493,76) é aproximadamente:
+A media diária da Loja Física na Black Friday (R$ 493,76) é aproximadamente:
 
 R$ 208,02 superior ao E-commerce
 
